@@ -1,0 +1,864 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9864BCB07CE3D87949B6E006 /* Pods_lovevite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A0F38A533B2C943A3D4467 /* Pods_lovevite.framework */; };
+		9B45722F1D9A15C800DED0A0 /* UIColor+default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B45722E1D9A15C800DED0A0 /* UIColor+default.swift */; };
+		9B4572481D9A25CF00DED0A0 /* multilingual.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B45724A1D9A25CF00DED0A0 /* multilingual.strings */; };
+		9BA1E4261D940D1E00974AFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA1E4251D940D1E00974AFF /* AppDelegate.swift */; };
+		9BA1E42D1D940D1E00974AFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BA1E42C1D940D1E00974AFF /* Assets.xcassets */; };
+		9BA1E43B1D940D1E00974AFF /* loveviteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA1E43A1D940D1E00974AFF /* loveviteTests.swift */; };
+		9BA1E4461D940D1E00974AFF /* loveviteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA1E4451D940D1E00974AFF /* loveviteUITests.swift */; };
+		9BA62EFC1D99257900C4FB0B /* ViewControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA62EF91D99257900C4FB0B /* ViewControllerManager.swift */; };
+		9BA62F0F1D992E3200C4FB0B /* MultilingualProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA62F0E1D992E3200C4FB0B /* MultilingualProcessing.swift */; };
+		9BE4FB651DBDE1BC006BB108 /* SettingsInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB4E1DBDE1BC006BB108 /* SettingsInfoModel.swift */; };
+		9BE4FB661DBDE1BC006BB108 /* SettingsUserInterfaceContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB4F1DBDE1BC006BB108 /* SettingsUserInterfaceContent.swift */; };
+		9BE4FB671DBDE1BC006BB108 /* DestinyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB521DBDE1BC006BB108 /* DestinyViewController.swift */; };
+		9BE4FB681DBDE1BC006BB108 /* IMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB541DBDE1BC006BB108 /* IMessageViewController.swift */; };
+		9BE4FB691DBDE1BC006BB108 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB561DBDE1BC006BB108 /* MineViewController.swift */; };
+		9BE4FB6A1DBDE1BC006BB108 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB581DBDE1BC006BB108 /* SearchViewController.swift */; };
+		9BE4FB6B1DBDE1BC006BB108 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB5A1DBDE1BC006BB108 /* SettingsViewController.swift */; };
+		9BE4FB6C1DBDE1BC006BB108 /* SettingsInfoManagerInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB5D1DBDE1BC006BB108 /* SettingsInfoManagerInService.swift */; };
+		9BE4FB6D1DBDE1BC006BB108 /* SettingsUserInterfaceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB5E1DBDE1BC006BB108 /* SettingsUserInterfaceConfigurator.swift */; };
+		9BE4FB6E1DBDE1BC006BB108 /* SettingSwitchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB5F1DBDE1BC006BB108 /* SettingSwitchManager.swift */; };
+		9BE4FB6F1DBDE1BC006BB108 /* RightForCustomVIewDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB621DBDE1BC006BB108 /* RightForCustomVIewDefaultCell.swift */; };
+		9BE4FB701DBDE1BC006BB108 /* SettingSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB641DBDE1BC006BB108 /* SettingSwitch.swift */; };
+		9BE4FB751DBDE203006BB108 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB721DBDE203006BB108 /* BaseViewController.swift */; };
+		9BE4FB761DBDE203006BB108 /* ExtendableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB731DBDE203006BB108 /* ExtendableViewController.swift */; };
+		9BE4FB771DBDE203006BB108 /* MainTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB741DBDE203006BB108 /* MainTabbarViewController.swift */; };
+		9BF5529D1D9ACB8500BC41B2 /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF5529C1D9ACB8500BC41B2 /* UITableView+extension.swift */; };
+		9BF552A61D9AD37F00BC41B2 /* UIFont+default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF552A51D9AD37F00BC41B2 /* UIFont+default.swift */; };
+		9BF552A81D9AD61C00BC41B2 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF552A71D9AD61C00BC41B2 /* Const.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BA1E4371D940D1E00974AFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BA1E41A1D940D1E00974AFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BA1E4211D940D1E00974AFF;
+			remoteInfo = lovevite;
+		};
+		9BA1E4421D940D1E00974AFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BA1E41A1D940D1E00974AFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BA1E4211D940D1E00974AFF;
+			remoteInfo = lovevite;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9B45722B1D993F9600DED0A0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1B514A19F18FA984BC389BEF /* Pods-lovevite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lovevite.release.xcconfig"; path = "Pods/Target Support Files/Pods-lovevite/Pods-lovevite.release.xcconfig"; sourceTree = "<group>"; };
+		238183185281144837376976 /* Pods-lovevite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lovevite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lovevite/Pods-lovevite.debug.xcconfig"; sourceTree = "<group>"; };
+		91A0F38A533B2C943A3D4467 /* Pods_lovevite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lovevite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B4572261D993F7D00DED0A0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B45722E1D9A15C800DED0A0 /* UIColor+default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+default.swift"; sourceTree = "<group>"; };
+		9B4572491D9A25CF00DED0A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/multilingual.strings; sourceTree = "<group>"; };
+		9B45724B1D9A25DB00DED0A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/multilingual.strings; sourceTree = "<group>"; };
+		9B45724C1D9A25E100DED0A0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/multilingual.strings"; sourceTree = "<group>"; };
+		9B45724D1D9A25E700DED0A0 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/multilingual.strings"; sourceTree = "<group>"; };
+		9BA1E4221D940D1E00974AFF /* lovevite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lovevite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BA1E4251D940D1E00974AFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9BA1E42C1D940D1E00974AFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BA1E4361D940D1E00974AFF /* loveviteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loveviteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BA1E43A1D940D1E00974AFF /* loveviteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loveviteTests.swift; sourceTree = "<group>"; };
+		9BA1E43C1D940D1E00974AFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BA1E4411D940D1E00974AFF /* loveviteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loveviteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BA1E4451D940D1E00974AFF /* loveviteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loveviteUITests.swift; sourceTree = "<group>"; };
+		9BA1E4471D940D1E00974AFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BA62EF91D99257900C4FB0B /* ViewControllerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerManager.swift; sourceTree = "<group>"; };
+		9BA62F0E1D992E3200C4FB0B /* MultilingualProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultilingualProcessing.swift; sourceTree = "<group>"; };
+		9BE4FB4E1DBDE1BC006BB108 /* SettingsInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsInfoModel.swift; sourceTree = "<group>"; };
+		9BE4FB4F1DBDE1BC006BB108 /* SettingsUserInterfaceContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsUserInterfaceContent.swift; sourceTree = "<group>"; };
+		9BE4FB521DBDE1BC006BB108 /* DestinyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinyViewController.swift; sourceTree = "<group>"; };
+		9BE4FB541DBDE1BC006BB108 /* IMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMessageViewController.swift; sourceTree = "<group>"; };
+		9BE4FB561DBDE1BC006BB108 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		9BE4FB581DBDE1BC006BB108 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		9BE4FB5A1DBDE1BC006BB108 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9BE4FB5D1DBDE1BC006BB108 /* SettingsInfoManagerInService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsInfoManagerInService.swift; sourceTree = "<group>"; };
+		9BE4FB5E1DBDE1BC006BB108 /* SettingsUserInterfaceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsUserInterfaceConfigurator.swift; sourceTree = "<group>"; };
+		9BE4FB5F1DBDE1BC006BB108 /* SettingSwitchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingSwitchManager.swift; sourceTree = "<group>"; };
+		9BE4FB621DBDE1BC006BB108 /* RightForCustomVIewDefaultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightForCustomVIewDefaultCell.swift; sourceTree = "<group>"; };
+		9BE4FB641DBDE1BC006BB108 /* SettingSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingSwitch.swift; sourceTree = "<group>"; };
+		9BE4FB721DBDE203006BB108 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9BE4FB731DBDE203006BB108 /* ExtendableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendableViewController.swift; sourceTree = "<group>"; };
+		9BE4FB741DBDE203006BB108 /* MainTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabbarViewController.swift; sourceTree = "<group>"; };
+		9BF5529C1D9ACB8500BC41B2 /* UITableView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
+		9BF552A51D9AD37F00BC41B2 /* UIFont+default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+default.swift"; sourceTree = "<group>"; };
+		9BF552A71D9AD61C00BC41B2 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		9BF552AE1D9AE02200BC41B2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BA1E41F1D940D1E00974AFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9864BCB07CE3D87949B6E006 /* Pods_lovevite.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA1E4331D940D1E00974AFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA1E43E1D940D1E00974AFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2AA5B8B2021F2C18482419C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91A0F38A533B2C943A3D4467 /* Pods_lovevite.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B45722D1D9A159000DED0A0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9B45722E1D9A15C800DED0A0 /* UIColor+default.swift */,
+				9BF5529C1D9ACB8500BC41B2 /* UITableView+extension.swift */,
+				9BF552A51D9AD37F00BC41B2 /* UIFont+default.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9BA1E4191D940D1E00974AFF = {
+			isa = PBXGroup;
+			children = (
+				9BA1E4241D940D1E00974AFF /* lovevite */,
+				9BA1E4391D940D1E00974AFF /* loveviteTests */,
+				9BA1E4441D940D1E00974AFF /* loveviteUITests */,
+				9BA1E4231D940D1E00974AFF /* Products */,
+				EF2C5B99A5BBDF7EDF757746 /* Pods */,
+				2AA5B8B2021F2C18482419C6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9BA1E4231D940D1E00974AFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BA1E4221D940D1E00974AFF /* lovevite.app */,
+				9BA1E4361D940D1E00974AFF /* loveviteTests.xctest */,
+				9BA1E4411D940D1E00974AFF /* loveviteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BA1E4241D940D1E00974AFF /* lovevite */ = {
+			isa = PBXGroup;
+			children = (
+				9B4572261D993F7D00DED0A0 /* Info.plist */,
+				9BA1E4251D940D1E00974AFF /* AppDelegate.swift */,
+				9BA1E42C1D940D1E00974AFF /* Assets.xcassets */,
+				9B45724A1D9A25CF00DED0A0 /* multilingual.strings */,
+				9B45722D1D9A159000DED0A0 /* Extension */,
+				9BA62F0D1D992D1A00C4FB0B /* Tools */,
+				9BA62EF81D99257900C4FB0B /* Managers */,
+				9BE4FB501DBDE1BC006BB108 /* ViewControllers */,
+				9BE4FB601DBDE1BC006BB108 /* Views */,
+				9BE4FB5B1DBDE1BC006BB108 /* ViewModels */,
+				9BE4FB4C1DBDE1BC006BB108 /* Models */,
+			);
+			path = lovevite;
+			sourceTree = "<group>";
+		};
+		9BA1E4391D940D1E00974AFF /* loveviteTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BA1E43A1D940D1E00974AFF /* loveviteTests.swift */,
+				9BA1E43C1D940D1E00974AFF /* Info.plist */,
+			);
+			path = loveviteTests;
+			sourceTree = "<group>";
+		};
+		9BA1E4441D940D1E00974AFF /* loveviteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9BA1E4451D940D1E00974AFF /* loveviteUITests.swift */,
+				9BA1E4471D940D1E00974AFF /* Info.plist */,
+			);
+			path = loveviteUITests;
+			sourceTree = "<group>";
+		};
+		9BA62EF81D99257900C4FB0B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9BA62EF91D99257900C4FB0B /* ViewControllerManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		9BA62F0D1D992D1A00C4FB0B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				9BF552AE1D9AE02200BC41B2 /* PrefixHeader.pch */,
+				9BF552A71D9AD61C00BC41B2 /* Const.swift */,
+				9BA62F0E1D992E3200C4FB0B /* MultilingualProcessing.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		9BE4FB4C1DBDE1BC006BB108 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9BE4FB4D1DBDE1BC006BB108 /* Settings */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9BE4FB4D1DBDE1BC006BB108 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9BE4FB4E1DBDE1BC006BB108 /* SettingsInfoModel.swift */,
+				9BE4FB4F1DBDE1BC006BB108 /* SettingsUserInterfaceContent.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		9BE4FB501DBDE1BC006BB108 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9BE4FB711DBDE203006BB108 /* Frame */,
+				9BE4FB511DBDE1BC006BB108 /* Destiny */,
+				9BE4FB531DBDE1BC006BB108 /* IM */,
+				9BE4FB551DBDE1BC006BB108 /* Mine */,
+				9BE4FB571DBDE1BC006BB108 /* Search */,
+				9BE4FB591DBDE1BC006BB108 /* Settings */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9BE4FB511DBDE1BC006BB108 /* Destiny */ = {
+			isa = PBXGroup;
+			children = (
+				9BE4FB521DBDE1BC006BB108 /* DestinyViewController.swift */,
+			);
+			path = Destiny;
+			sourceTree = "<group>";
+		};
+		9BE4FB531DBDE1BC006BB108 /* IM */ = {
+			isa = PBXGroup;
+			children = (
+				9BE4FB541DBDE1BC006BB108 /* IMessageViewController.swift */,
+			);
+			path = IM;
+			sourceTree = "<group>";
+		};
+		9BE4FB551DBDE1BC006BB108 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				9BE4FB561DBDE1BC006BB108 /* MineViewController.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		9BE4FB571DBDE1BC006BB108 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9BE4FB581DBDE1BC006BB108 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		9BE4FB591DBDE1BC006BB108 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9BE4FB5A1DBDE1BC006BB108 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		9BE4FB5B1DBDE1BC006BB108 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9BE4FB5C1DBDE1BC006BB108 /* Settings */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9BE4FB5C1DBDE1BC006BB108 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9BE4FB5D1DBDE1BC006BB108 /* SettingsInfoManagerInService.swift */,
+				9BE4FB5E1DBDE1BC006BB108 /* SettingsUserInterfaceConfigurator.swift */,
+				9BE4FB5F1DBDE1BC006BB108 /* SettingSwitchManager.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		9BE4FB601DBDE1BC006BB108 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9BE4FB611DBDE1BC006BB108 /* Common */,
+				9BE4FB631DBDE1BC006BB108 /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9BE4FB611DBDE1BC006BB108 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9BE4FB621DBDE1BC006BB108 /* RightForCustomVIewDefaultCell.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9BE4FB631DBDE1BC006BB108 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9BE4FB641DBDE1BC006BB108 /* SettingSwitch.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		9BE4FB711DBDE203006BB108 /* Frame */ = {
+			isa = PBXGroup;
+			children = (
+				9BE4FB721DBDE203006BB108 /* BaseViewController.swift */,
+				9BE4FB731DBDE203006BB108 /* ExtendableViewController.swift */,
+				9BE4FB741DBDE203006BB108 /* MainTabbarViewController.swift */,
+			);
+			path = Frame;
+			sourceTree = "<group>";
+		};
+		EF2C5B99A5BBDF7EDF757746 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				238183185281144837376976 /* Pods-lovevite.debug.xcconfig */,
+				1B514A19F18FA984BC389BEF /* Pods-lovevite.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BA1E4211D940D1E00974AFF /* lovevite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BA1E44A1D940D1E00974AFF /* Build configuration list for PBXNativeTarget "lovevite" */;
+			buildPhases = (
+				ABECB8652FD5BC68040292E9 /* Check Pods Manifest.lock */,
+				9BA1E41E1D940D1E00974AFF /* Sources */,
+				9BA1E41F1D940D1E00974AFF /* Frameworks */,
+				9BA1E4201D940D1E00974AFF /* Resources */,
+				64ACE150F55C255324EA65C6 /* Embed Pods Frameworks */,
+				86C28C4C885A333C71866FBA /* Copy Pods Resources */,
+				9B45722B1D993F9600DED0A0 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lovevite;
+			productName = lovevite;
+			productReference = 9BA1E4221D940D1E00974AFF /* lovevite.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9BA1E4351D940D1E00974AFF /* loveviteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BA1E44D1D940D1E00974AFF /* Build configuration list for PBXNativeTarget "loveviteTests" */;
+			buildPhases = (
+				9BA1E4321D940D1E00974AFF /* Sources */,
+				9BA1E4331D940D1E00974AFF /* Frameworks */,
+				9BA1E4341D940D1E00974AFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BA1E4381D940D1E00974AFF /* PBXTargetDependency */,
+			);
+			name = loveviteTests;
+			productName = loveviteTests;
+			productReference = 9BA1E4361D940D1E00974AFF /* loveviteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9BA1E4401D940D1E00974AFF /* loveviteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BA1E4501D940D1E00974AFF /* Build configuration list for PBXNativeTarget "loveviteUITests" */;
+			buildPhases = (
+				9BA1E43D1D940D1E00974AFF /* Sources */,
+				9BA1E43E1D940D1E00974AFF /* Frameworks */,
+				9BA1E43F1D940D1E00974AFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BA1E4431D940D1E00974AFF /* PBXTargetDependency */,
+			);
+			name = loveviteUITests;
+			productName = loveviteUITests;
+			productReference = 9BA1E4411D940D1E00974AFF /* loveviteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BA1E41A1D940D1E00974AFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = lovevite;
+				TargetAttributes = {
+					9BA1E4211D940D1E00974AFF = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = U7D4Y9654H;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
+					};
+					9BA1E4351D940D1E00974AFF = {
+						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9BA1E4211D940D1E00974AFF;
+					};
+					9BA1E4401D940D1E00974AFF = {
+						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9BA1E4211D940D1E00974AFF;
+					};
+				};
+			};
+			buildConfigurationList = 9BA1E41D1D940D1E00974AFF /* Build configuration list for PBXProject "lovevite" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				"zh-Hans",
+				"zh-Hant",
+			);
+			mainGroup = 9BA1E4191D940D1E00974AFF;
+			productRefGroup = 9BA1E4231D940D1E00974AFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BA1E4211D940D1E00974AFF /* lovevite */,
+				9BA1E4351D940D1E00974AFF /* loveviteTests */,
+				9BA1E4401D940D1E00974AFF /* loveviteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BA1E4201D940D1E00974AFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BA1E42D1D940D1E00974AFF /* Assets.xcassets in Resources */,
+				9B4572481D9A25CF00DED0A0 /* multilingual.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA1E4341D940D1E00974AFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA1E43F1D940D1E00974AFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		64ACE150F55C255324EA65C6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lovevite/Pods-lovevite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86C28C4C885A333C71866FBA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lovevite/Pods-lovevite-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABECB8652FD5BC68040292E9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BA1E41E1D940D1E00974AFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE4FB6E1DBDE1BC006BB108 /* SettingSwitchManager.swift in Sources */,
+				9BE4FB771DBDE203006BB108 /* MainTabbarViewController.swift in Sources */,
+				9BA62EFC1D99257900C4FB0B /* ViewControllerManager.swift in Sources */,
+				9BF5529D1D9ACB8500BC41B2 /* UITableView+extension.swift in Sources */,
+				9B45722F1D9A15C800DED0A0 /* UIColor+default.swift in Sources */,
+				9BE4FB701DBDE1BC006BB108 /* SettingSwitch.swift in Sources */,
+				9BE4FB751DBDE203006BB108 /* BaseViewController.swift in Sources */,
+				9BE4FB761DBDE203006BB108 /* ExtendableViewController.swift in Sources */,
+				9BE4FB6C1DBDE1BC006BB108 /* SettingsInfoManagerInService.swift in Sources */,
+				9BE4FB691DBDE1BC006BB108 /* MineViewController.swift in Sources */,
+				9BA1E4261D940D1E00974AFF /* AppDelegate.swift in Sources */,
+				9BE4FB6F1DBDE1BC006BB108 /* RightForCustomVIewDefaultCell.swift in Sources */,
+				9BE4FB651DBDE1BC006BB108 /* SettingsInfoModel.swift in Sources */,
+				9BE4FB6D1DBDE1BC006BB108 /* SettingsUserInterfaceConfigurator.swift in Sources */,
+				9BE4FB681DBDE1BC006BB108 /* IMessageViewController.swift in Sources */,
+				9BF552A61D9AD37F00BC41B2 /* UIFont+default.swift in Sources */,
+				9BA62F0F1D992E3200C4FB0B /* MultilingualProcessing.swift in Sources */,
+				9BE4FB6A1DBDE1BC006BB108 /* SearchViewController.swift in Sources */,
+				9BE4FB6B1DBDE1BC006BB108 /* SettingsViewController.swift in Sources */,
+				9BE4FB671DBDE1BC006BB108 /* DestinyViewController.swift in Sources */,
+				9BE4FB661DBDE1BC006BB108 /* SettingsUserInterfaceContent.swift in Sources */,
+				9BF552A81D9AD61C00BC41B2 /* Const.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA1E4321D940D1E00974AFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BA1E43B1D940D1E00974AFF /* loveviteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA1E43D1D940D1E00974AFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BA1E4461D940D1E00974AFF /* loveviteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BA1E4381D940D1E00974AFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BA1E4211D940D1E00974AFF /* lovevite */;
+			targetProxy = 9BA1E4371D940D1E00974AFF /* PBXContainerItemProxy */;
+		};
+		9BA1E4431D940D1E00974AFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BA1E4211D940D1E00974AFF /* lovevite */;
+			targetProxy = 9BA1E4421D940D1E00974AFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9B45724A1D9A25CF00DED0A0 /* multilingual.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B4572491D9A25CF00DED0A0 /* Base */,
+				9B45724B1D9A25DB00DED0A0 /* en */,
+				9B45724C1D9A25E100DED0A0 /* zh-Hans */,
+				9B45724D1D9A25E700DED0A0 /* zh-Hant */,
+			);
+			name = multilingual.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9BA1E4481D940D1E00974AFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		9BA1E4491D940D1E00974AFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9BA1E44B1D940D1E00974AFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 238183185281144837376976 /* Pods-lovevite.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = U7D4Y9654H;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = lovevite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.easonleo.lovevite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2114eef2-5ac6-4db3-b957-eb9af02ae926";
+				PROVISIONING_PROFILE_SPECIFIER = Lovevite.Devolopment;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/mac/Desktop/自己项目/lovevite/lovevite/Tools/PrefixHeader.pch";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9BA1E44C1D940D1E00974AFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B514A19F18FA984BC389BEF /* Pods-lovevite.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = U7D4Y9654H;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = lovevite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.easonleo.lovevite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1af9fb6a-1239-4a6e-9168-57b3fd24ae49";
+				PROVISIONING_PROFILE_SPECIFIER = Lovevite.AdHoc;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/mac/Desktop/自己项目/lovevite/lovevite/Tools/PrefixHeader.pch";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		9BA1E44E1D940D1E00974AFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = loveviteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eason.loveviteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lovevite.app/lovevite";
+			};
+			name = Debug;
+		};
+		9BA1E44F1D940D1E00974AFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = loveviteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eason.loveviteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lovevite.app/lovevite";
+			};
+			name = Release;
+		};
+		9BA1E4511D940D1E00974AFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = loveviteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eason.loveviteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+				TEST_TARGET_NAME = lovevite;
+			};
+			name = Debug;
+		};
+		9BA1E4521D940D1E00974AFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = loveviteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eason.loveviteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+				TEST_TARGET_NAME = lovevite;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BA1E41D1D940D1E00974AFF /* Build configuration list for PBXProject "lovevite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BA1E4481D940D1E00974AFF /* Debug */,
+				9BA1E4491D940D1E00974AFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BA1E44A1D940D1E00974AFF /* Build configuration list for PBXNativeTarget "lovevite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BA1E44B1D940D1E00974AFF /* Debug */,
+				9BA1E44C1D940D1E00974AFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BA1E44D1D940D1E00974AFF /* Build configuration list for PBXNativeTarget "loveviteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BA1E44E1D940D1E00974AFF /* Debug */,
+				9BA1E44F1D940D1E00974AFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BA1E4501D940D1E00974AFF /* Build configuration list for PBXNativeTarget "loveviteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BA1E4511D940D1E00974AFF /* Debug */,
+				9BA1E4521D940D1E00974AFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9BA1E41A1D940D1E00974AFF /* Project object */;
+}
