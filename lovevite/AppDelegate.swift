@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         
+        UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: .Fade)
+        
         window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
         window?.backgroundColor = UIColor.whiteColor()
         window?.rootViewController = ViewControllerManager.manager.rootViewController

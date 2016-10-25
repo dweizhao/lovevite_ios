@@ -9,10 +9,19 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+    
+    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.background()
+        automaticallyAdjustsScrollViewInsets = false
+        initializeUserInterface()
     }
+    
+    func initializeUserInterface() {
+        view.backgroundColor = UIColor.bgGray
+    }
+    
+    func responseUIEvent() {}
 
 }

@@ -16,9 +16,7 @@ class ViewControllerManager: NSObject {
     
     let mainTabbarViewController: MainTabbarViewController
     
-    let extendableViewController: ExtendableViewController
-    
-    let rootViewController: UINavigationController
+    let rootViewController: ExtendableViewController
     
     // MARK: private
     
@@ -26,12 +24,9 @@ class ViewControllerManager: NSObject {
         mainTabbarViewController = MainTabbarViewController()
         
         let mainNavigationController = UINavigationController(rootViewController: mainTabbarViewController)
-        mainNavigationController.navigationBar.barTintColor = UIColor.theme()
+        mainNavigationController.navigationBar.barTintColor = UIColor.main
         
-        extendableViewController = ExtendableViewController(mainViewController: mainNavigationController)
-        
-        rootViewController = UINavigationController(rootViewController: extendableViewController)
-        rootViewController.navigationBarHidden = true
+        rootViewController = ExtendableViewController(mainViewController: mainNavigationController)
         
         super.init()
     }

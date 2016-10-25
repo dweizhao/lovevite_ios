@@ -30,15 +30,15 @@ class RightForCustomVIewDefaultCell: UITableViewCell {
 extension RightForCustomVIewDefaultCell {
     
     private func configTitleLabel() {
-        titleLabel.textColor = UIColor.textBody()
-        titleLabel.font = UIFont.body()
+        titleLabel.textColor = UIColor.title
+        titleLabel.font = UIFont.body
         titleLabel.textAlignment = .Left
     }
     
     override func updateConstraints() {
         super.updateConstraints()
         titleLabel.snp_makeConstraints { (make) in
-            make.left.equalTo(Const.defaultInset * 2)
+            make.left.equalTo(UIConst.defaultInset * 2)
             make.top.bottom.equalTo(contentView)
         }
     }

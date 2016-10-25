@@ -8,14 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		9864BCB07CE3D87949B6E006 /* Pods_lovevite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A0F38A533B2C943A3D4467 /* Pods_lovevite.framework */; };
-		9B45722F1D9A15C800DED0A0 /* UIColor+default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B45722E1D9A15C800DED0A0 /* UIColor+default.swift */; };
 		9B4572481D9A25CF00DED0A0 /* multilingual.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B45724A1D9A25CF00DED0A0 /* multilingual.strings */; };
 		9BA1E4261D940D1E00974AFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA1E4251D940D1E00974AFF /* AppDelegate.swift */; };
 		9BA1E42D1D940D1E00974AFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BA1E42C1D940D1E00974AFF /* Assets.xcassets */; };
 		9BA1E43B1D940D1E00974AFF /* loveviteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA1E43A1D940D1E00974AFF /* loveviteTests.swift */; };
 		9BA1E4461D940D1E00974AFF /* loveviteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA1E4451D940D1E00974AFF /* loveviteUITests.swift */; };
 		9BA62EFC1D99257900C4FB0B /* ViewControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA62EF91D99257900C4FB0B /* ViewControllerManager.swift */; };
-		9BA62F0F1D992E3200C4FB0B /* MultilingualProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA62F0E1D992E3200C4FB0B /* MultilingualProcessing.swift */; };
+		9BC49C371DBE317800B55BAD /* MultipleTabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC49C361DBE317800B55BAD /* MultipleTabsViewController.swift */; };
+		9BC49C431DBE330900B55BAD /* UIColor+default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC49C3C1DBE330900B55BAD /* UIColor+default.swift */; };
+		9BC49C441DBE330900B55BAD /* UIFont+default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC49C3D1DBE330900B55BAD /* UIFont+default.swift */; };
+		9BC49C451DBE330900B55BAD /* UIScreen+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC49C3E1DBE330900B55BAD /* UIScreen+extension.swift */; };
+		9BC49C461DBE330900B55BAD /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC49C3F1DBE330900B55BAD /* UITableView+extension.swift */; };
+		9BC49C471DBE330900B55BAD /* MultilingualProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC49C411DBE330900B55BAD /* MultilingualProcessing.swift */; };
+		9BC49C4E1DBE351400B55BAD /* UISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC49C4D1DBE351400B55BAD /* UISettings.swift */; };
+		9BC49C511DBE37F200B55BAD /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC49C501DBE37F200B55BAD /* Keys.swift */; };
+		9BC49C531DBE37FC00B55BAD /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC49C521DBE37FC00B55BAD /* NotificationNames.swift */; };
+		9BC49C561DBE3AE900B55BAD /* RightForCustomVIewDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC49C551DBE3AE900B55BAD /* RightForCustomVIewDefaultCell.swift */; };
+		9BC49C581DBE3B0300B55BAD /* MultipleTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC49C571DBE3B0300B55BAD /* MultipleTabView.swift */; };
+		9BC49C5A1DBE41D200B55BAD /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC49C591DBE41D200B55BAD /* PersonalInfoViewController.swift */; };
+		9BC49C5C1DBE445100B55BAD /* DesiredRequireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC49C5B1DBE445100B55BAD /* DesiredRequireViewController.swift */; };
+		9BC49C5F1DBE482900B55BAD /* MineUserInterfaceContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC49C5E1DBE482900B55BAD /* MineUserInterfaceContent.swift */; };
+		9BC49C621DBE524600B55BAD /* MineDefaultStyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC49C611DBE524600B55BAD /* MineDefaultStyleCell.swift */; };
+		9BC49C691DBE56FF00B55BAD /* PersonalInfoConfiguator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC49C681DBE56FF00B55BAD /* PersonalInfoConfiguator.swift */; };
+		9BC49C6B1DBE5BD300B55BAD /* DesiredRequireConfiguator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC49C6A1DBE5BD300B55BAD /* DesiredRequireConfiguator.swift */; };
+		9BC49C6D1DBE606900B55BAD /* MineConfiguator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC49C6C1DBE606900B55BAD /* MineConfiguator.swift */; };
 		9BE4FB651DBDE1BC006BB108 /* SettingsInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB4E1DBDE1BC006BB108 /* SettingsInfoModel.swift */; };
 		9BE4FB661DBDE1BC006BB108 /* SettingsUserInterfaceContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB4F1DBDE1BC006BB108 /* SettingsUserInterfaceContent.swift */; };
 		9BE4FB671DBDE1BC006BB108 /* DestinyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB521DBDE1BC006BB108 /* DestinyViewController.swift */; };
@@ -26,14 +42,10 @@
 		9BE4FB6C1DBDE1BC006BB108 /* SettingsInfoManagerInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB5D1DBDE1BC006BB108 /* SettingsInfoManagerInService.swift */; };
 		9BE4FB6D1DBDE1BC006BB108 /* SettingsUserInterfaceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB5E1DBDE1BC006BB108 /* SettingsUserInterfaceConfigurator.swift */; };
 		9BE4FB6E1DBDE1BC006BB108 /* SettingSwitchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB5F1DBDE1BC006BB108 /* SettingSwitchManager.swift */; };
-		9BE4FB6F1DBDE1BC006BB108 /* RightForCustomVIewDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB621DBDE1BC006BB108 /* RightForCustomVIewDefaultCell.swift */; };
 		9BE4FB701DBDE1BC006BB108 /* SettingSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB641DBDE1BC006BB108 /* SettingSwitch.swift */; };
 		9BE4FB751DBDE203006BB108 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB721DBDE203006BB108 /* BaseViewController.swift */; };
 		9BE4FB761DBDE203006BB108 /* ExtendableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB731DBDE203006BB108 /* ExtendableViewController.swift */; };
 		9BE4FB771DBDE203006BB108 /* MainTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB741DBDE203006BB108 /* MainTabbarViewController.swift */; };
-		9BF5529D1D9ACB8500BC41B2 /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF5529C1D9ACB8500BC41B2 /* UITableView+extension.swift */; };
-		9BF552A61D9AD37F00BC41B2 /* UIFont+default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF552A51D9AD37F00BC41B2 /* UIFont+default.swift */; };
-		9BF552A81D9AD61C00BC41B2 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF552A71D9AD61C00BC41B2 /* Const.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +83,6 @@
 		238183185281144837376976 /* Pods-lovevite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lovevite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lovevite/Pods-lovevite.debug.xcconfig"; sourceTree = "<group>"; };
 		91A0F38A533B2C943A3D4467 /* Pods_lovevite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lovevite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4572261D993F7D00DED0A0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B45722E1D9A15C800DED0A0 /* UIColor+default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+default.swift"; sourceTree = "<group>"; };
 		9B4572491D9A25CF00DED0A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/multilingual.strings; sourceTree = "<group>"; };
 		9B45724B1D9A25DB00DED0A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/multilingual.strings; sourceTree = "<group>"; };
 		9B45724C1D9A25E100DED0A0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/multilingual.strings"; sourceTree = "<group>"; };
@@ -86,7 +97,25 @@
 		9BA1E4451D940D1E00974AFF /* loveviteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loveviteUITests.swift; sourceTree = "<group>"; };
 		9BA1E4471D940D1E00974AFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BA62EF91D99257900C4FB0B /* ViewControllerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerManager.swift; sourceTree = "<group>"; };
-		9BA62F0E1D992E3200C4FB0B /* MultilingualProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultilingualProcessing.swift; sourceTree = "<group>"; };
+		9BC49C361DBE317800B55BAD /* MultipleTabsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleTabsViewController.swift; sourceTree = "<group>"; };
+		9BC49C3C1DBE330900B55BAD /* UIColor+default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+default.swift"; sourceTree = "<group>"; };
+		9BC49C3D1DBE330900B55BAD /* UIFont+default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+default.swift"; sourceTree = "<group>"; };
+		9BC49C3E1DBE330900B55BAD /* UIScreen+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+extension.swift"; sourceTree = "<group>"; };
+		9BC49C3F1DBE330900B55BAD /* UITableView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
+		9BC49C411DBE330900B55BAD /* MultilingualProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultilingualProcessing.swift; sourceTree = "<group>"; };
+		9BC49C421DBE330900B55BAD /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		9BC49C4D1DBE351400B55BAD /* UISettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISettings.swift; sourceTree = "<group>"; };
+		9BC49C501DBE37F200B55BAD /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		9BC49C521DBE37FC00B55BAD /* NotificationNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
+		9BC49C551DBE3AE900B55BAD /* RightForCustomVIewDefaultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightForCustomVIewDefaultCell.swift; sourceTree = "<group>"; };
+		9BC49C571DBE3B0300B55BAD /* MultipleTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleTabView.swift; sourceTree = "<group>"; };
+		9BC49C591DBE41D200B55BAD /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
+		9BC49C5B1DBE445100B55BAD /* DesiredRequireViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesiredRequireViewController.swift; sourceTree = "<group>"; };
+		9BC49C5E1DBE482900B55BAD /* MineUserInterfaceContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineUserInterfaceContent.swift; sourceTree = "<group>"; };
+		9BC49C611DBE524600B55BAD /* MineDefaultStyleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineDefaultStyleCell.swift; sourceTree = "<group>"; };
+		9BC49C681DBE56FF00B55BAD /* PersonalInfoConfiguator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoConfiguator.swift; sourceTree = "<group>"; };
+		9BC49C6A1DBE5BD300B55BAD /* DesiredRequireConfiguator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesiredRequireConfiguator.swift; sourceTree = "<group>"; };
+		9BC49C6C1DBE606900B55BAD /* MineConfiguator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineConfiguator.swift; sourceTree = "<group>"; };
 		9BE4FB4E1DBDE1BC006BB108 /* SettingsInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsInfoModel.swift; sourceTree = "<group>"; };
 		9BE4FB4F1DBDE1BC006BB108 /* SettingsUserInterfaceContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsUserInterfaceContent.swift; sourceTree = "<group>"; };
 		9BE4FB521DBDE1BC006BB108 /* DestinyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinyViewController.swift; sourceTree = "<group>"; };
@@ -97,15 +126,10 @@
 		9BE4FB5D1DBDE1BC006BB108 /* SettingsInfoManagerInService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsInfoManagerInService.swift; sourceTree = "<group>"; };
 		9BE4FB5E1DBDE1BC006BB108 /* SettingsUserInterfaceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsUserInterfaceConfigurator.swift; sourceTree = "<group>"; };
 		9BE4FB5F1DBDE1BC006BB108 /* SettingSwitchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingSwitchManager.swift; sourceTree = "<group>"; };
-		9BE4FB621DBDE1BC006BB108 /* RightForCustomVIewDefaultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightForCustomVIewDefaultCell.swift; sourceTree = "<group>"; };
 		9BE4FB641DBDE1BC006BB108 /* SettingSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingSwitch.swift; sourceTree = "<group>"; };
 		9BE4FB721DBDE203006BB108 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9BE4FB731DBDE203006BB108 /* ExtendableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendableViewController.swift; sourceTree = "<group>"; };
 		9BE4FB741DBDE203006BB108 /* MainTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabbarViewController.swift; sourceTree = "<group>"; };
-		9BF5529C1D9ACB8500BC41B2 /* UITableView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
-		9BF552A51D9AD37F00BC41B2 /* UIFont+default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+default.swift"; sourceTree = "<group>"; };
-		9BF552A71D9AD61C00BC41B2 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		9BF552AE1D9AE02200BC41B2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,16 +166,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9B45722D1D9A159000DED0A0 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				9B45722E1D9A15C800DED0A0 /* UIColor+default.swift */,
-				9BF5529C1D9ACB8500BC41B2 /* UITableView+extension.swift */,
-				9BF552A51D9AD37F00BC41B2 /* UIFont+default.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		9BA1E4191D940D1E00974AFF = {
 			isa = PBXGroup;
 			children = (
@@ -181,8 +195,7 @@
 				9BA1E4251D940D1E00974AFF /* AppDelegate.swift */,
 				9BA1E42C1D940D1E00974AFF /* Assets.xcassets */,
 				9B45724A1D9A25CF00DED0A0 /* multilingual.strings */,
-				9B45722D1D9A159000DED0A0 /* Extension */,
-				9BA62F0D1D992D1A00C4FB0B /* Tools */,
+				9BC49C3A1DBE330900B55BAD /* Utils */,
 				9BA62EF81D99257900C4FB0B /* Managers */,
 				9BE4FB501DBDE1BC006BB108 /* ViewControllers */,
 				9BE4FB601DBDE1BC006BB108 /* Views */,
@@ -218,19 +231,85 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		9BA62F0D1D992D1A00C4FB0B /* Tools */ = {
+		9BC49C3A1DBE330900B55BAD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				9BF552AE1D9AE02200BC41B2 /* PrefixHeader.pch */,
-				9BF552A71D9AD61C00BC41B2 /* Const.swift */,
-				9BA62F0E1D992E3200C4FB0B /* MultilingualProcessing.swift */,
+				9BC49C4F1DBE37EA00B55BAD /* Const */,
+				9BC49C3B1DBE330900B55BAD /* Extensions */,
+				9BC49C401DBE330900B55BAD /* Handler */,
+				9BC49C4D1DBE351400B55BAD /* UISettings.swift */,
+				9BC49C421DBE330900B55BAD /* PrefixHeader.pch */,
 			);
-			path = Tools;
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9BC49C3B1DBE330900B55BAD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9BC49C3C1DBE330900B55BAD /* UIColor+default.swift */,
+				9BC49C3D1DBE330900B55BAD /* UIFont+default.swift */,
+				9BC49C3E1DBE330900B55BAD /* UIScreen+extension.swift */,
+				9BC49C3F1DBE330900B55BAD /* UITableView+extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9BC49C401DBE330900B55BAD /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				9BC49C411DBE330900B55BAD /* MultilingualProcessing.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		9BC49C4F1DBE37EA00B55BAD /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				9BC49C501DBE37F200B55BAD /* Keys.swift */,
+				9BC49C521DBE37FC00B55BAD /* NotificationNames.swift */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		9BC49C541DBE3AE900B55BAD /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				9BC49C571DBE3B0300B55BAD /* MultipleTabView.swift */,
+				9BC49C551DBE3AE900B55BAD /* RightForCustomVIewDefaultCell.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		9BC49C5D1DBE481100B55BAD /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				9BC49C5E1DBE482900B55BAD /* MineUserInterfaceContent.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		9BC49C601DBE523000B55BAD /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				9BC49C611DBE524600B55BAD /* MineDefaultStyleCell.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		9BC49C651DBE56E100B55BAD /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				9BC49C681DBE56FF00B55BAD /* PersonalInfoConfiguator.swift */,
+				9BC49C6A1DBE5BD300B55BAD /* DesiredRequireConfiguator.swift */,
+				9BC49C6C1DBE606900B55BAD /* MineConfiguator.swift */,
+			);
+			path = Mine;
 			sourceTree = "<group>";
 		};
 		9BE4FB4C1DBDE1BC006BB108 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9BC49C5D1DBE481100B55BAD /* Mine */,
 				9BE4FB4D1DBDE1BC006BB108 /* Settings */,
 			);
 			path = Models;
@@ -249,10 +328,10 @@
 			isa = PBXGroup;
 			children = (
 				9BE4FB711DBDE203006BB108 /* Frame */,
+				9BE4FB571DBDE1BC006BB108 /* Search */,
 				9BE4FB511DBDE1BC006BB108 /* Destiny */,
 				9BE4FB531DBDE1BC006BB108 /* IM */,
 				9BE4FB551DBDE1BC006BB108 /* Mine */,
-				9BE4FB571DBDE1BC006BB108 /* Search */,
 				9BE4FB591DBDE1BC006BB108 /* Settings */,
 			);
 			path = ViewControllers;
@@ -278,6 +357,8 @@
 			isa = PBXGroup;
 			children = (
 				9BE4FB561DBDE1BC006BB108 /* MineViewController.swift */,
+				9BC49C591DBE41D200B55BAD /* PersonalInfoViewController.swift */,
+				9BC49C5B1DBE445100B55BAD /* DesiredRequireViewController.swift */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -302,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				9BE4FB5C1DBDE1BC006BB108 /* Settings */,
+				9BC49C651DBE56E100B55BAD /* Mine */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -319,18 +401,11 @@
 		9BE4FB601DBDE1BC006BB108 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9BE4FB611DBDE1BC006BB108 /* Common */,
+				9BC49C601DBE523000B55BAD /* Mine */,
+				9BC49C541DBE3AE900B55BAD /* Widgets */,
 				9BE4FB631DBDE1BC006BB108 /* Settings */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		9BE4FB611DBDE1BC006BB108 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				9BE4FB621DBDE1BC006BB108 /* RightForCustomVIewDefaultCell.swift */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		9BE4FB631DBDE1BC006BB108 /* Settings */ = {
@@ -347,6 +422,7 @@
 				9BE4FB721DBDE203006BB108 /* BaseViewController.swift */,
 				9BE4FB731DBDE203006BB108 /* ExtendableViewController.swift */,
 				9BE4FB741DBDE203006BB108 /* MainTabbarViewController.swift */,
+				9BC49C361DBE317800B55BAD /* MultipleTabsViewController.swift */,
 			);
 			path = Frame;
 			sourceTree = "<group>";
@@ -553,26 +629,38 @@
 			files = (
 				9BE4FB6E1DBDE1BC006BB108 /* SettingSwitchManager.swift in Sources */,
 				9BE4FB771DBDE203006BB108 /* MainTabbarViewController.swift in Sources */,
+				9BC49C4E1DBE351400B55BAD /* UISettings.swift in Sources */,
+				9BC49C531DBE37FC00B55BAD /* NotificationNames.swift in Sources */,
+				9BC49C5A1DBE41D200B55BAD /* PersonalInfoViewController.swift in Sources */,
+				9BC49C581DBE3B0300B55BAD /* MultipleTabView.swift in Sources */,
 				9BA62EFC1D99257900C4FB0B /* ViewControllerManager.swift in Sources */,
-				9BF5529D1D9ACB8500BC41B2 /* UITableView+extension.swift in Sources */,
-				9B45722F1D9A15C800DED0A0 /* UIColor+default.swift in Sources */,
+				9BC49C471DBE330900B55BAD /* MultilingualProcessing.swift in Sources */,
+				9BC49C6B1DBE5BD300B55BAD /* DesiredRequireConfiguator.swift in Sources */,
+				9BC49C431DBE330900B55BAD /* UIColor+default.swift in Sources */,
+				9BC49C691DBE56FF00B55BAD /* PersonalInfoConfiguator.swift in Sources */,
 				9BE4FB701DBDE1BC006BB108 /* SettingSwitch.swift in Sources */,
+				9BC49C621DBE524600B55BAD /* MineDefaultStyleCell.swift in Sources */,
 				9BE4FB751DBDE203006BB108 /* BaseViewController.swift in Sources */,
 				9BE4FB761DBDE203006BB108 /* ExtendableViewController.swift in Sources */,
 				9BE4FB6C1DBDE1BC006BB108 /* SettingsInfoManagerInService.swift in Sources */,
 				9BE4FB691DBDE1BC006BB108 /* MineViewController.swift in Sources */,
+				9BC49C561DBE3AE900B55BAD /* RightForCustomVIewDefaultCell.swift in Sources */,
 				9BA1E4261D940D1E00974AFF /* AppDelegate.swift in Sources */,
-				9BE4FB6F1DBDE1BC006BB108 /* RightForCustomVIewDefaultCell.swift in Sources */,
+				9BC49C5C1DBE445100B55BAD /* DesiredRequireViewController.swift in Sources */,
 				9BE4FB651DBDE1BC006BB108 /* SettingsInfoModel.swift in Sources */,
 				9BE4FB6D1DBDE1BC006BB108 /* SettingsUserInterfaceConfigurator.swift in Sources */,
 				9BE4FB681DBDE1BC006BB108 /* IMessageViewController.swift in Sources */,
-				9BF552A61D9AD37F00BC41B2 /* UIFont+default.swift in Sources */,
-				9BA62F0F1D992E3200C4FB0B /* MultilingualProcessing.swift in Sources */,
+				9BC49C461DBE330900B55BAD /* UITableView+extension.swift in Sources */,
+				9BC49C441DBE330900B55BAD /* UIFont+default.swift in Sources */,
 				9BE4FB6A1DBDE1BC006BB108 /* SearchViewController.swift in Sources */,
 				9BE4FB6B1DBDE1BC006BB108 /* SettingsViewController.swift in Sources */,
 				9BE4FB671DBDE1BC006BB108 /* DestinyViewController.swift in Sources */,
+				9BC49C6D1DBE606900B55BAD /* MineConfiguator.swift in Sources */,
+				9BC49C371DBE317800B55BAD /* MultipleTabsViewController.swift in Sources */,
 				9BE4FB661DBDE1BC006BB108 /* SettingsUserInterfaceContent.swift in Sources */,
-				9BF552A81D9AD61C00BC41B2 /* Const.swift in Sources */,
+				9BC49C5F1DBE482900B55BAD /* MineUserInterfaceContent.swift in Sources */,
+				9BC49C451DBE330900B55BAD /* UIScreen+extension.swift in Sources */,
+				9BC49C511DBE37F200B55BAD /* Keys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,7 +823,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "2114eef2-5ac6-4db3-b957-eb9af02ae926";
 				PROVISIONING_PROFILE_SPECIFIER = Lovevite.Devolopment;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/mac/Desktop/自己项目/lovevite/lovevite/Tools/PrefixHeader.pch";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/mac/Desktop/自己项目/lovevite/lovevite/Utils/PrefixHeader.pch";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -759,7 +847,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1af9fb6a-1239-4a6e-9168-57b3fd24ae49";
 				PROVISIONING_PROFILE_SPECIFIER = Lovevite.AdHoc;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/mac/Desktop/自己项目/lovevite/lovevite/Tools/PrefixHeader.pch";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/mac/Desktop/自己项目/lovevite/lovevite/Utils/PrefixHeader.pch";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

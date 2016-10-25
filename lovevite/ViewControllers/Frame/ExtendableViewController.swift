@@ -26,6 +26,8 @@ extension ExtendableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        edgesForExtendedLayout = .None
+        automaticallyAdjustsScrollViewInsets = false
         view.backgroundColor = UIColor.whiteColor()
         
         if let vc = mainViewController {

@@ -10,6 +10,26 @@ import UIKit
 
 extension UIFont {
     
+    static func defaultWithSize(size: CGFloat) -> UIFont {
+        return UIFont.systemFontOfSize(size)
+    }
+    
+    static var title: UIFont {
+        return UIFont.systemFontOfSize(UIFont.labelFontSize())
+    }
+    
+    static var body: UIFont {
+        return UIFont.systemFontOfSize(15.0)
+    }
+    
+    static var button: UIFont {
+        return UIFont.systemFontOfSize(UIFont.buttonFontSize())
+    }
+    
+}
+
+extension UIFont {
+    
     static func title(weight: CGFloat? = nil) -> UIFont {
         if weight != nil {
             if #available(iOS 8.2, *) {

@@ -39,11 +39,11 @@ extension SettingsViewController {
     }
     
     private func configSignOutButton() {
-        signOutBtn.frame = CGRectMake(Const.defaultInset, 28, Const.screenWidth - Const.defaultInset * 2, 50)
+        signOutBtn.frame = CGRectMake(UIConst.defaultInset, 28, UIScreen.width - UIConst.defaultInset * 2, 50)
         signOutBtn.setTitle(configurator.signOutBtnTitle(), forState: .Normal)
         signOutBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         signOutBtn.titleLabel?.font = UIFont.button()
-        signOutBtn.backgroundColor = UIColor.theme()
+        signOutBtn.backgroundColor = UIColor.main
         signOutBtn.layer.cornerRadius = 4
         signOutBtn.rx_tap
             .subscribeNext({
@@ -79,13 +79,13 @@ extension SettingsViewController: UITableViewDataSource {
                     settingLabel.textColor = UIColor.lightGrayColor()
                     settingLabel.font = UIFont.body()
                     cell.addRightView(settingLabel, rightViewContraintsMaker: { (maker) in
-                        maker.right.equalTo(cell.accessoryType == .DisclosureIndicator ? 0 : -Const.defaultInset)
+                        maker.right.equalTo(cell.accessoryType == .DisclosureIndicator ? 0 : -UIConst.defaultInset)
                         maker.centerY.equalTo(0)
                     })
                 case .Switch:
                     let settingSwitch = SettingSwitch.init(switchMark: indexPath)
                     cell.addRightView(settingSwitch, rightViewContraintsMaker: { (maker) in
-                        maker.right.equalTo(-Const.defaultInset)
+                        maker.right.equalTo(-UIConst.defaultInset)
                         maker.centerY.equalTo(0)
                     })
             }
@@ -99,8 +99,8 @@ extension SettingsViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header: UITableViewHeaderFooterView = tableView.dequeueStaticHeaderView(section)
         if header.contentView.subviews.count == 0 {
-            let label = UILabel.init(frame: CGRectMake(Const.defaultInset, 0, 200, self.tableView(tableView, heightForHeaderInSection: section)))
-            label.textColor = UIColor.textTitle()
+            let label = UILabel.init(frame: CGRectMake(UIConst.defaultInset, 0, 200, self.tableView(tableView, heightForHeaderInSection: section)))
+            label.textColor = UIColor.title
             label.font = UIFont.title()
             label.text = configurator.headerTitle(section)
             header.contentView.addSubview(label)

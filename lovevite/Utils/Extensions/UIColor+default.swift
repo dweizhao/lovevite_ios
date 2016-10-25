@@ -18,20 +18,28 @@ extension UIColor {
         return color(hexValue: hex, alphaValue: 1)
     }
     
-    static func theme() -> UIColor {
+    static var main: UIColor {
         return UIColor.color(hexValue: 0xE74614)
     }
     
-    static func background() -> UIColor {
-        return UIColor.color(hexValue: 0xF0F0F0)
+    static func main(alpha: CGFloat = 1) -> UIColor {
+        return UIColor.color(hexValue: 0xE74614, alphaValue: alpha)
     }
     
-    static func textTitle() -> UIColor {
+    static var bgGray: UIColor {
+        return UIColor.color(hexValue: 0xF8F8F8)
+    }
+    
+    static var title: UIColor {
+        return UIColor.color(hexValue: 0x000000)
+    }
+    
+    static var text: UIColor {
         return UIColor.color(hexValue: 0x222222)
     }
     
-    static func textBody() -> UIColor {
-        return UIColor.color(hexValue: 0x000000)
+    static var textGray: UIColor {
+        return UIColor.color(hexValue: 0x999999)
     }
     
 }

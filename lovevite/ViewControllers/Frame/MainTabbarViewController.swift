@@ -26,7 +26,7 @@ class MainTabbarViewController: UITabBarController {
             viewController.tabBarItem = UITabBarItem.init(title: es_titles[index], image: image, selectedImage: selectedImage)
         }
         setViewControllers(es_viewControllers, animated: false)
-        tabBar.tintColor = UIColor.theme()
+        tabBar.tintColor = UIColor.main
         delegate = self
     }
     
@@ -37,8 +37,6 @@ extension MainTabbarViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.whiteColor()
-        edgesForExtendedLayout = .None
-        automaticallyAdjustsScrollViewInsets = false
     }
     
 }
