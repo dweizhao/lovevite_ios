@@ -62,6 +62,10 @@
 		9BE4FB751DBDE203006BB108 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB721DBDE203006BB108 /* BaseViewController.swift */; };
 		9BE4FB761DBDE203006BB108 /* ExtendableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB731DBDE203006BB108 /* ExtendableViewController.swift */; };
 		9BE4FB771DBDE203006BB108 /* MainTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4FB741DBDE203006BB108 /* MainTabbarViewController.swift */; };
+		DB2196311DC778B600F11BB0 /* API+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21962C1DC778B600F11BB0 /* API+Login.swift */; };
+		DB2196321DC778B600F11BB0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21962E1DC778B600F11BB0 /* NetworkManager.swift */; };
+		DB2196331DC778B600F11BB0 /* RequestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21962F1DC778B600F11BB0 /* RequestConfig.swift */; };
+		DB2196341DC778B600F11BB0 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2196301DC778B600F11BB0 /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +166,10 @@
 		9BE4FB721DBDE203006BB108 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9BE4FB731DBDE203006BB108 /* ExtendableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendableViewController.swift; sourceTree = "<group>"; };
 		9BE4FB741DBDE203006BB108 /* MainTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabbarViewController.swift; sourceTree = "<group>"; };
+		DB21962C1DC778B600F11BB0 /* API+Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API+Login.swift"; sourceTree = "<group>"; };
+		DB21962E1DC778B600F11BB0 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DB21962F1DC778B600F11BB0 /* RequestConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestConfig.swift; sourceTree = "<group>"; };
+		DB2196301DC778B600F11BB0 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +263,7 @@
 				9BA1E4251D940D1E00974AFF /* AppDelegate.swift */,
 				9BA1E42C1D940D1E00974AFF /* Assets.xcassets */,
 				9B45724A1D9A25CF00DED0A0 /* multilingual.strings */,
+				DB21962B1DC778B600F11BB0 /* API */,
 				9BC49C3A1DBE330900B55BAD /* Utils */,
 				9BA62EF81D99257900C4FB0B /* Managers */,
 				9BE4FB501DBDE1BC006BB108 /* ViewControllers */,
@@ -499,6 +508,25 @@
 			path = Frame;
 			sourceTree = "<group>";
 		};
+		DB21962B1DC778B600F11BB0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DB21962C1DC778B600F11BB0 /* API+Login.swift */,
+				DB21962D1DC778B600F11BB0 /* Core */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		DB21962D1DC778B600F11BB0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DB21962E1DC778B600F11BB0 /* NetworkManager.swift */,
+				DB21962F1DC778B600F11BB0 /* RequestConfig.swift */,
+				DB2196301DC778B600F11BB0 /* Response.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		EF2C5B99A5BBDF7EDF757746 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -707,6 +735,7 @@
 				9BC49C531DBE37FC00B55BAD /* NotificationNames.swift in Sources */,
 				9BC49C5A1DBE41D200B55BAD /* PersonalInfoViewController.swift in Sources */,
 				9BC49C581DBE3B0300B55BAD /* MultipleTabView.swift in Sources */,
+				DB2196331DC778B600F11BB0 /* RequestConfig.swift in Sources */,
 				9B2F86451DC731D200931F4A /* UIImage+effect.swift in Sources */,
 				9BA62EFC1D99257900C4FB0B /* ViewControllerManager.swift in Sources */,
 				9BC49C471DBE330900B55BAD /* MultilingualProcessing.swift in Sources */,
@@ -715,6 +744,7 @@
 				9BC49C691DBE56FF00B55BAD /* PersonalInfoConfiguator.swift in Sources */,
 				9BE4FB701DBDE1BC006BB108 /* SettingSwitch.swift in Sources */,
 				9BC49C621DBE524600B55BAD /* MineDefaultStyleCell.swift in Sources */,
+				DB2196321DC778B600F11BB0 /* NetworkManager.swift in Sources */,
 				9BE4FB751DBDE203006BB108 /* BaseViewController.swift in Sources */,
 				9B2F86481DC731D200931F4A /* UIVIewController+effect.swift in Sources */,
 				9BE4FB761DBDE203006BB108 /* ExtendableViewController.swift in Sources */,
@@ -731,11 +761,13 @@
 				9BE4FB6D1DBDE1BC006BB108 /* SettingsUserInterfaceConfigurator.swift in Sources */,
 				9BE4FB681DBDE1BC006BB108 /* IMessageViewController.swift in Sources */,
 				9BC49C461DBE330900B55BAD /* UITableView+extension.swift in Sources */,
+				DB2196311DC778B600F11BB0 /* API+Login.swift in Sources */,
 				9B2F863B1DC729F900931F4A /* UITextField+style.swift in Sources */,
 				9BC49C441DBE330900B55BAD /* UIFont+default.swift in Sources */,
 				9BE4FB6A1DBDE1BC006BB108 /* SearchViewController.swift in Sources */,
 				9B2F862E1DC6F17500931F4A /* UserInfo.swift in Sources */,
 				9B1BE9AD1DC10FF1002E143D /* ESAnimation.swift in Sources */,
+				DB2196341DC778B600F11BB0 /* Response.swift in Sources */,
 				9BE4FB6B1DBDE1BC006BB108 /* SettingsViewController.swift in Sources */,
 				9BE4FB671DBDE1BC006BB108 /* DestinyViewController.swift in Sources */,
 				9B2F864D1DC73F2D00931F4A /* InputHandler.swift in Sources */,
