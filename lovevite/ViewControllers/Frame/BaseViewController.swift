@@ -15,13 +15,21 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         automaticallyAdjustsScrollViewInsets = false
-        initializeUserInterface()
+        initialize()
     }
     
-    func initializeUserInterface() {
+    func initialize() {
         view.backgroundColor = UIColor.bgGray
     }
-    
-    func responseUIEvent() {}
 
+}
+
+extension BaseViewController {
+    
+    // subclass could override the function to change operation.
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        view.firstInputResponder()?.resignFirstResponder()
+    }
+    
 }

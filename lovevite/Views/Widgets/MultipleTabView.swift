@@ -31,6 +31,7 @@ class MultipleTabsView: UICollectionView {
         showsVerticalScrollIndicator = false
         showsHorizontalScrollIndicator = false
         pagingEnabled = true
+        bounces = false
     }
     
 }

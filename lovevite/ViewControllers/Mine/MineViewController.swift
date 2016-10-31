@@ -17,7 +17,7 @@ class MineViewController: MultipleTabsViewController {
             .subscribeNext { [weak self] noti in
                 if let offsetY = (noti.userInfo?["offsetY"] as? CGFloat) {
                     let y = offsetY > MineUserInterfaceContent.photosViewHeight ? MineUserInterfaceContent.photosViewHeight : offsetY
-                    self?.photosView.frame.origin.y = -y
+                    self?.headerView.frame.origin.y = -y
                 }
             }
             .addDisposableTo(disposeBag)
@@ -26,6 +26,8 @@ class MineViewController: MultipleTabsViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    private let headerView: UIView = UIView.init(frame: CGRectMake(0, 0, UIScreen.width, UIScreen.width))
     
     private let photosView: UICollectionView = {
         let fl = UICollectionViewFlowLayout.init()
@@ -41,7 +43,7 @@ class MineViewController: MultipleTabsViewController {
         return c
     }()
     
-    private let toPhotoLibraryBtn = UIButton.init(type: UIButtonType.System)
+    private let segmentView = ESSegmentControl.init(titles: ["个人资料".es_ml(), "择偶要求".es_ml(), "关于我".es_ml(), "真心话".es_ml()])
     
     override var subViewControllers: Array<BaseViewController> {
         return viewControllers
@@ -50,12 +52,16 @@ class MineViewController: MultipleTabsViewController {
     private let viewControllers = [PersonalInfoViewController(), DesiredRequireViewController()]
     
     struct ReuseIdentifier {
-        
         static let photoCell = "photoCell"
-        
     }
     
     private let viewModel = MineConfiguator()
+    
+    override var currentIndex: Int {
+        willSet {
+            segmentView.index = newValue
+        }
+    }
 
 }
 
@@ -63,8 +69,7 @@ extension MineViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeUserInterface()
-        responseUIEvent()
+        initialize()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -79,26 +84,37 @@ extension MineViewController {
         UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: .None)
     }
     
-    override func initializeUserInterface() {
+    override func initialize() {
+        title = "主页"
+        
+        view.addSubview(headerView)
+        
         photosView.dataSource = self
         photosView.delegate = self
         photosView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: ReuseIdentifier.photoCell)
-        view.addSubview(photosView)
+        headerView.addSubview(photosView)
         
+        let toPhotoLibraryBtn = UIButton.custom("编辑照片".es_ml())
         toPhotoLibraryBtn.frame = CGRectMake(Scale.width(40), UIScreen.width - Scale.height(80), 70, 30)
         toPhotoLibraryBtn.backgroundColor = UIColor.main
         toPhotoLibraryBtn.layer.cornerRadius = 4
-        toPhotoLibraryBtn.setTitle("编辑照片".es_ml(), forState: .Normal)
         toPhotoLibraryBtn.tintColor = UIColor.whiteColor()
-        photosView.addSubview(toPhotoLibraryBtn)
-    }
-    
-    override func responseUIEvent() {
+        headerView.addSubview(toPhotoLibraryBtn)
+        
+        segmentView.frame = CGRectMake(0, UIScreen.width - 35, UIScreen.width, 35)
+        segmentView.updateConstraintsIfNeeded()
+        segmentView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.4)
+        headerView.addSubview(segmentView)
+        
+        // MARK: to photo library button response.
+        
         toPhotoLibraryBtn.rx_tap
             .subscribeNext({
                 print("编辑照片")
             })
             .addDisposableTo(disposeBag)
+        
+        
     }
     
 }
@@ -130,10 +146,3 @@ extension MineViewController {
     
 }
 
-extension MineViewController {
-    
-    func collectionView(collectionView: UICollectionView, didEndDisplayingCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
-        
-    }
-    
-}

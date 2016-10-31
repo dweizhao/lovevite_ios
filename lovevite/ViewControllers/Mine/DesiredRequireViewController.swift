@@ -52,10 +52,10 @@ extension DesiredRequireViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeUserInterface()
+        initialize()
     }
     
-    override func initializeUserInterface() {
+    override func initialize() {
         tableView.addTableHeaderView(MineUserInterfaceContent.photosViewHeight)
         tableView.contentOffset.y = contentOffsetY
         tableView.dataSource = self

@@ -22,7 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = ViewControllerManager.manager.rootViewController
         window?.makeKeyAndVisible()
         
+        setRootViewControllerWithSign()
+        
+        ApplicationHandler.launch()
+        
         return true
+    }
+    
+    private func setRootViewControllerWithSign() {
+        if UserManager.isUserExit == false {
+            let vc = UINavigationController.init(rootViewController: IntroduceViewController())
+            vc.navigationBarHidden = true
+            window?.rootViewController?.presentViewController(vc, animated: false, completion: nil)
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {

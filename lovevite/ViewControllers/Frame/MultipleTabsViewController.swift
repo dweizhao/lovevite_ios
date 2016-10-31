@@ -12,6 +12,8 @@ class MultipleTabsViewController: BaseViewController {
     
     private let backgroundView = MultipleTabsView()
     
+    dynamic var currentIndex: Int = 0
+    
     @objc var subViewControllers: Array<BaseViewController>? {
         return nil
     }
@@ -28,10 +30,10 @@ extension MultipleTabsViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeUserInterface()
+        initialize()
     }
     
-    override func initializeUserInterface() {
+    override func initialize() {
         if let _ = subViewControllers {
             backgroundView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: ReuseIdentifier.viewControllerCell)
             backgroundView.dataSource = self
@@ -65,4 +67,12 @@ extension MultipleTabsViewController: UICollectionViewDataSource {
     
 }
 
-extension MultipleTabsViewController: UICollectionViewDelegate {}
+extension MultipleTabsViewController: UICollectionViewDelegate {
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if scrollView == backgroundView {
+            currentIndex = Int(round(scrollView.contentOffset.x / UIScreen.width))
+        }
+    }
+    
+}

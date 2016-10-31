@@ -33,4 +33,6 @@ class PersonalInfoConfiguator: NSObject {
         }
     }
     
+    
+    
 }

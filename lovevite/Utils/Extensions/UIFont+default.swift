@@ -15,52 +15,43 @@ extension UIFont {
     }
     
     static var title: UIFont {
-        return UIFont.systemFontOfSize(UIFont.labelFontSize())
-    }
-    
-    static var body: UIFont {
-        return UIFont.systemFontOfSize(15.0)
+        return UIFont.defaultWithSize(17.0)
     }
     
     static var button: UIFont {
-        return UIFont.systemFontOfSize(UIFont.buttonFontSize())
+        return UIFont.defaultWithSize(16.0)
+    }
+    
+    static var body: UIFont {
+        return UIFont.defaultWithSize(15.0)
     }
     
 }
 
 extension UIFont {
     
-    static func title(weight: CGFloat? = nil) -> UIFont {
-        if weight != nil {
-            if #available(iOS 8.2, *) {
-                return UIFont.systemFontOfSize(UIFont.labelFontSize(), weight: weight!)
-            } else {
-                return UIFont.boldSystemFontOfSize(UIFont.labelFontSize())
-            }
+    static func title(weight: CGFloat) -> UIFont {
+        if #available(iOS 8.2, *) {
+            return UIFont.systemFontOfSize(17.0, weight: weight)
+        } else {
+            return UIFont.boldSystemFontOfSize(17.0)
         }
-        return UIFont.systemFontOfSize(UIFont.labelFontSize())
     }
     
-    static func body(weight: CGFloat? = nil) -> UIFont {
-        if weight != nil {
-            if #available(iOS 8.2, *) {
-                return UIFont.systemFontOfSize(15.0, weight: weight!)
-            } else {
-                return UIFont.boldSystemFontOfSize(15.0)
-            }
+    static func button(weight: CGFloat) -> UIFont {
+        if #available(iOS 8.2, *) {
+            return UIFont.systemFontOfSize(16.0, weight: weight)
+        } else {
+            return UIFont.boldSystemFontOfSize(16.0)
         }
-        return UIFont.systemFontOfSize(15.0)
     }
     
-    static func button(weight: CGFloat? = nil) -> UIFont {
-        if weight != nil {
-            if #available(iOS 8.2, *) {
-                return UIFont.systemFontOfSize(UIFont.buttonFontSize(), weight: weight!)
-            } else {
-                return UIFont.boldSystemFontOfSize(UIFont.labelFontSize())
-            }
+    static func body(weight: CGFloat) -> UIFont {
+        if #available(iOS 8.2, *) {
+            return UIFont.systemFontOfSize(15.0, weight: weight)
+        } else {
+            return UIFont.boldSystemFontOfSize(15.0)
         }
-        return UIFont.systemFontOfSize(UIFont.buttonFontSize())
     }
     
 }

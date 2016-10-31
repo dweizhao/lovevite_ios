@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+// MARK: common
+
+class Keys: NSObject {
+    
+    static var lauch: String {
+        return "eason_lovevite_lauch"
+    }
+    
+}
+
+// MARK: user
+
+extension Keys {
+    
+    static var saveUserInfo: String {
+        return "eason_lovevite_save_user_info"
+    }
+    
+}

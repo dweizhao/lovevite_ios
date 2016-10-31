@@ -51,10 +51,10 @@ extension PersonalInfoViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeUserInterface()
+        initialize()
     }
     
-    override func initializeUserInterface() {
+    override func initialize() {
         // will reset contentOffset.y when add table header view.
         tableView.addTableHeaderView(MineUserInterfaceContent.photosViewHeight)
         tableView.contentOffset.y = contentOffsetY

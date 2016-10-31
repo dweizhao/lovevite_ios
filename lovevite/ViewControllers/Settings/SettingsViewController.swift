@@ -42,7 +42,7 @@ extension SettingsViewController {
         signOutBtn.frame = CGRectMake(UIConst.defaultInset, 28, UIScreen.width - UIConst.defaultInset * 2, 50)
         signOutBtn.setTitle(configurator.signOutBtnTitle(), forState: .Normal)
         signOutBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        signOutBtn.titleLabel?.font = UIFont.button()
+        signOutBtn.titleLabel?.font = UIFont.button
         signOutBtn.backgroundColor = UIColor.main
         signOutBtn.layer.cornerRadius = 4
         signOutBtn.rx_tap
@@ -77,7 +77,7 @@ extension SettingsViewController: UITableViewDataSource {
                 case .Label:
                     let settingLabel = UILabel.init()
                     settingLabel.textColor = UIColor.lightGrayColor()
-                    settingLabel.font = UIFont.body()
+                    settingLabel.font = UIFont.body
                     cell.addRightView(settingLabel, rightViewContraintsMaker: { (maker) in
                         maker.right.equalTo(cell.accessoryType == .DisclosureIndicator ? 0 : -UIConst.defaultInset)
                         maker.centerY.equalTo(0)
@@ -101,7 +101,7 @@ extension SettingsViewController: UITableViewDataSource {
         if header.contentView.subviews.count == 0 {
             let label = UILabel.init(frame: CGRectMake(UIConst.defaultInset, 0, 200, self.tableView(tableView, heightForHeaderInSection: section)))
             label.textColor = UIColor.title
-            label.font = UIFont.title()
+            label.font = UIFont.title
             label.text = configurator.headerTitle(section)
             header.contentView.addSubview(label)
         }
