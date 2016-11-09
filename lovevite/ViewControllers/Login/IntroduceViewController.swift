@@ -24,9 +24,13 @@ class IntroduceViewController: BaseViewController {
 
 extension IntroduceViewController {
     
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: .Fade)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialize()
     }
     
     override func initialize() {
@@ -93,7 +97,8 @@ extension IntroduceViewController {
         
         view.addSubview(loginBtn)
         loginBtn.snp_makeConstraints { (make) in
-            make.centerX.equalTo(view).multipliedBy(1.5).offset(-10)
+            make.centerX.equalTo(view)
+                .multipliedBy(1.5).offset(-10)
             make.centerY.width.height.equalTo(signinBtn)
         }
         
@@ -117,19 +122,17 @@ extension IntroduceViewController {
 
 extension IntroduceViewController {
     
-    private func operatingAnimation() {
-        
-    }
-    
     private func responseLogin() {
-        operatingAnimation()
         let vc = LoginViewController()
-        vc.setBackgroundBlur(UIScreen.capture(backgroundView, size: backgroundView.frame.size)?.commonBlur())
+        let originalImage = UIScreen.capture(backgroundView.visibleCells().last!, size: backgroundView.frame.size)
+        let blurImage = originalImage?.commonBlur()
+        vc.setBackgroundBlurAnimation(originalImage, blur: blurImage)
         navigationController?.pushViewController(vc, animated: false)
     }
     
     private func responseSignin() {
-        operatingAnimation()
+        let vc = SigninViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

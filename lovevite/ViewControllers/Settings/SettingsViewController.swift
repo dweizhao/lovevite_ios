@@ -65,7 +65,7 @@ extension SettingsViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: RightForCustomVIewDefaultCell = tableView.dequeueStaticCell(indexPath)
+        let cell: RightForCustomViewDefaultCell = tableView.dequeueStaticCell(indexPath)
         cell.titleLabel.text = configurator.cellTitle(indexPath)
         cell.selectionStyle = .None
         cell.accessoryType = configurator.checkCellAccessoryType(indexPath)

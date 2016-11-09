@@ -15,15 +15,15 @@ extension UIFont {
     }
     
     static var title: UIFont {
-        return UIFont.defaultWithSize(17.0)
+        return UIFont.defaultWithSize(15.0)
     }
     
     static var button: UIFont {
-        return UIFont.defaultWithSize(16.0)
+        return UIFont.defaultWithSize(14.0)
     }
     
     static var body: UIFont {
-        return UIFont.defaultWithSize(15.0)
+        return UIFont.defaultWithSize(12.0)
     }
     
 }

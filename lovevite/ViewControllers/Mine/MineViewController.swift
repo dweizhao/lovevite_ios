@@ -49,7 +49,7 @@ class MineViewController: MultipleTabsViewController {
         return viewControllers
     }
     
-    private let viewControllers = [PersonalInfoViewController(), DesiredRequireViewController()]
+    private let viewControllers = [PersonalInfoViewController(), DesiredRequireViewController(), SomeQuestionForMeViewController(), TrueWordsViewController()]
     
     struct ReuseIdentifier {
         static let photoCell = "photoCell"
@@ -69,7 +69,6 @@ extension MineViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialize()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -85,6 +84,8 @@ extension MineViewController {
     }
     
     override func initialize() {
+        super.initialize()
+        
         title = "主页"
         
         view.addSubview(headerView)
@@ -108,13 +109,9 @@ extension MineViewController {
         
         // MARK: to photo library button response.
         
-        toPhotoLibraryBtn.rx_tap
-            .subscribeNext({
+        toPhotoLibraryBtn.rx_tap.subscribeNext({
                 print("编辑照片")
-            })
-            .addDisposableTo(disposeBag)
-        
-        
+            }).addDisposableTo(disposeBag)
     }
     
 }

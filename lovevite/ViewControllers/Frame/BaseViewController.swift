@@ -12,6 +12,14 @@ class BaseViewController: UIViewController {
     
     let disposeBag = DisposeBag()
 
+}
+
+extension BaseViewController {
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         automaticallyAdjustsScrollViewInsets = false
@@ -21,10 +29,6 @@ class BaseViewController: UIViewController {
     func initialize() {
         view.backgroundColor = UIColor.bgGray
     }
-
-}
-
-extension BaseViewController {
     
     // subclass could override the function to change operation.
     

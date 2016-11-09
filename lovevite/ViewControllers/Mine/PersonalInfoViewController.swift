@@ -51,10 +51,10 @@ extension PersonalInfoViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialize()
     }
     
     override func initialize() {
+        title = "个人资料"
         // will reset contentOffset.y when add table header view.
         tableView.addTableHeaderView(MineUserInterfaceContent.photosViewHeight)
         tableView.contentOffset.y = contentOffsetY
@@ -78,7 +78,8 @@ extension PersonalInfoViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(ReuseIdentifier.defaultCell) as! MineDefaultStyleCell
-        cell.textLabel?.text = viewModel.cellTitle(indexPath)
+        cell.title = viewModel.cellTitle(indexPath)
+        cell.detail = "111"
         cell.accessoryType = viewModel.cellAllowSelected(indexPath) ? .DisclosureIndicator : .None
         cell.selectionStyle = .None
         return cell

@@ -10,11 +10,25 @@ import Foundation
 
 extension UITextField {
     
-    func setCommonStyle(placeHolderString: String? = nil) {
+    func setCommonStyle(placeHolderString: String?) {
         backgroundColor = UIColor.clearColor()
         placeholder = placeHolderString
         textColor = UIColor.text
         font = UIFont.body
+    }
+    
+    func setLikeUserNameStyle(placeHolderString: String?) {
+        setCommonStyle(placeHolderString)
+        autocorrectionType = .No
+        autocapitalizationType = .None
+        keyboardType = .EmailAddress
+    }
+    
+    func setLikePasswordStyle(placeHolderString: String?) {
+        setCommonStyle(placeHolderString)
+        autocorrectionType = .No
+        autocapitalizationType = .None
+        secureTextEntry = true
     }
     
 }

@@ -30,10 +30,10 @@ extension MultipleTabsViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialize()
     }
     
     override func initialize() {
+        super.initialize()
         if let _ = subViewControllers {
             backgroundView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: ReuseIdentifier.viewControllerCell)
             backgroundView.dataSource = self
@@ -55,7 +55,7 @@ extension MultipleTabsViewController: UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell: UICollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(ReuseIdentifier.viewControllerCell, forIndexPath: indexPath)
+        let cell: UICollectionViewCell = collectionView.dequeueStaticCell(indexPath)
         if cell.contentView.subviews.count == 0 {
             if let vc = subViewControllers?[indexPath.item] {
                 addChildViewController(vc)

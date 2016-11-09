@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         
-        UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: .Fade)
+        UIBarButtonItem.appearance()
+            .setBackButtonTitlePositionAdjustment(UIOffset.init(horizontal: 0, vertical: -64.0), forBarMetrics: .Default)
         
         window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
         window?.backgroundColor = UIColor.whiteColor()
@@ -30,10 +31,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setRootViewControllerWithSign() {
-        if UserManager.isUserExit == false {
+        if UserManager.isUserExit == true {
+            UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: .None)
             let vc = UINavigationController.init(rootViewController: IntroduceViewController())
             vc.navigationBarHidden = true
-            window?.rootViewController?.presentViewController(vc, animated: false, completion: nil)
+            vc.setCommonStyle()
+            window?.rootViewController?
+                .presentViewController(vc, animated: false, completion: nil)
         }
     }
 
@@ -61,4 +65,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-

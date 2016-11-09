@@ -12,12 +12,18 @@ class MineDefaultStyleCell: UITableViewCell {
     
     var title: String? {
         willSet {
-            textLabel?.text = title
+            textLabel?.text = newValue
+        }
+    }
+    
+    var detail: String? {
+        willSet {
+            detailTextLabel?.text = newValue
         }
     }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: .Default, reuseIdentifier: reuseIdentifier)
+        super.init(style: .Value1, reuseIdentifier: reuseIdentifier)
         textLabel?.textColor = UIColor.title
         textLabel?.font = UIFont.title
         detailTextLabel?.textColor = UIColor.textGray

@@ -1,5 +1,5 @@
 //
-//  RightForCustomVIewDefaultCell.swift
+//  RightForCustomViewDefaultCell.swift
 //  lovevite
 //
 //  Created by Eason Leo on 2016/9/28.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RightForCustomVIewDefaultCell: UITableViewCell {
+class RightForCustomViewDefaultCell: UITableViewCell {
 
     let titleLabel = UILabel()
     
@@ -27,7 +27,7 @@ class RightForCustomVIewDefaultCell: UITableViewCell {
 
 }
 
-extension RightForCustomVIewDefaultCell {
+extension RightForCustomViewDefaultCell {
     
     private func configTitleLabel() {
         titleLabel.textColor = UIColor.title
@@ -39,22 +39,20 @@ extension RightForCustomVIewDefaultCell {
         super.updateConstraints()
         titleLabel.snp_makeConstraints { (make) in
             make.left.equalTo(UIConst.defaultInset * 2)
-            make.top.bottom.equalTo(contentView)
+            make.centerY.equalTo(-1)
         }
     }
     
 }
 
-extension RightForCustomVIewDefaultCell {
+extension RightForCustomViewDefaultCell {
     
-    func addRightView(view: UIView, rightViewContraintsMaker maker: ((ConstraintMaker) -> Void)? = nil) {
+    func addRightView(view: UIView, rightViewContraintsMaker maker: ((ConstraintMaker) -> Void)) {
         rightView = view
         if rightView?.superview == nil {
             contentView.addSubview(rightView!)
         }
-        if let mark = maker {
-            rightView?.snp_remakeConstraints(closure: mark)
-        }
+        rightView?.snp_remakeConstraints(closure: maker)
     }
     
 }

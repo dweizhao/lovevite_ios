@@ -14,6 +14,10 @@ struct UIConst {
         return 12.0
     }
     
+    static var topInset: CGFloat {
+        return 8.0
+    }
+    
 }
 
 struct Scale {

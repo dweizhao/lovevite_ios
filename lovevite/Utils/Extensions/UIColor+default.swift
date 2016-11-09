@@ -30,6 +30,10 @@ extension UIColor {
         return UIColor.color(hexValue: 0xF8F8F8)
     }
     
+    static var bgDarkGray: UIColor {
+        return UIColor.color(hexValue: 0xF3F3F3)
+    }
+    
     static var title: UIColor {
         return UIColor.color(hexValue: 0x000000)
     }

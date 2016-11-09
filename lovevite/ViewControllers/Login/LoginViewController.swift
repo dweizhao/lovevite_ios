@@ -17,7 +17,6 @@ extension LoginViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialize()
     }
     
     override func initialize() {
@@ -25,7 +24,7 @@ extension LoginViewController {
         
         let whiteView = UIView()
         whiteView.backgroundColor = UIColor.clearColor()
-        whiteView.layer.contents = UIImage(named: "login_text_bg")?.CGImage
+        whiteView.layer.contents = UIImage(named: "circular_border_bg")?.CGImage
         whiteView.setShadow()
         
         view.addSubview(whiteView)
@@ -38,7 +37,7 @@ extension LoginViewController {
         //MARK: username textfied
         
         let username = UITextField()
-        username.setCommonStyle("用户名/邮箱/手机号".es_ml())
+        username.setLikeUserNameStyle("用户名/邮箱/手机号".es_ml())
         username.delegate = self
         
         whiteView.addSubview(username)
@@ -60,7 +59,7 @@ extension LoginViewController {
         //MARK: password textfield
         
         let password = UITextField()
-        password.setCommonStyle("密码".es_ml())
+        password.setLikePasswordStyle("密码".es_ml())
         password.delegate = self
         
         whiteView.addSubview(password)
@@ -113,9 +112,30 @@ extension LoginViewController {
                 return false
             }
             return true
-        }.subscribeNext { (username, password) in
-            
+        }.subscribeNext { [weak self] (username, password) in
+            self?.presentingViewController?.dismissViewControllerAnimated(true, completion: { 
+                ViewControllerManager.manager.mainTabbarViewController.view.showMsgHUD("模拟登录成功")
+            })
         }.addDisposableTo(disposeBag)
+        
+        //MARK: register button
+        
+        let signinBtn = UIButton.init(type: UIButtonType.System)
+        signinBtn.setAttributedTitle(NSAttributedString.init(string: "注册".es_ml(), attributes: [NSForegroundColorAttributeName:UIColor.color(hexValue: 0x419bf9), NSFontAttributeName:UIFont.button]), forState: .Normal)
+        
+        view.addSubview(signinBtn)
+        signinBtn.snp_makeConstraints { (make) in
+            make.top.equalTo(loginBtn.snp_bottom).offset(10)
+            make.right.equalTo(loginBtn)
+            make.height.equalTo(30)
+        }
+        
+        signinBtn.rx_tap
+            .subscribeNext({ [weak self] _ in
+                let vc = SigninViewController()
+                self?.navigationController?.pushViewController(vc, animated: true)
+            })
+            .addDisposableTo(disposeBag)
     }
     
 }

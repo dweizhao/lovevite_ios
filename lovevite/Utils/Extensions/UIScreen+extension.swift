@@ -18,6 +18,10 @@ extension UIScreen {
         return UIScreen.mainScreen().bounds.height
     }
     
+    static var onePix: CGFloat {
+        return 1.0 / UIScreen.mainScreen().scale
+    }
+    
     static var navigationBarHeight: CGFloat {
         return 64.0
     }

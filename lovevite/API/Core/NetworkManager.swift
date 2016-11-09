@@ -8,7 +8,6 @@
 
 import Alamofire
 import ObjectMapper
-import AlamofireObjectMapper
 import RxAlamofire
 import RxSwift
 import RxCocoa
