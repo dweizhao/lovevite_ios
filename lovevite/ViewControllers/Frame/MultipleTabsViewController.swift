@@ -12,17 +12,31 @@ class MultipleTabsViewController: BaseViewController {
     
     private let backgroundView = MultipleTabsView()
     
-    dynamic var currentIndex: Int = 0
+    private var tabIndex: Int = 0
+    
+    private struct ReuseIdentifier {
+        static let viewControllerCell = "viewControllerCell"
+    }
+    
+    dynamic var currentIndex: Int {
+        set {
+            tabIndex = newValue
+            indexSubject.onNext(newValue)
+        }
+        get {
+            return tabIndex
+        }
+    }
     
     @objc var subViewControllers: Array<BaseViewController>? {
         return nil
     }
     
-    struct ReuseIdentifier {
-        
-        static let viewControllerCell = "viewControllerCell"
-        
+    @objc var segmentView: ESSegmentControl? {
+        return nil
     }
+    
+    let indexSubject = PublishSubject<Int>()
     
 }
 
@@ -39,6 +53,32 @@ extension MultipleTabsViewController {
             backgroundView.dataSource = self
             backgroundView.delegate = self
             view.addSubview(backgroundView)
+            
+            indexSubject.subscribeNext({ [weak self] (idx) in
+                guard let `self` = self else {
+                    return
+                }
+                if idx != self.currentIndex {
+                    self.backgroundView.setContentOffset(CGPoint.init(x: UIScreen.width * CGFloat(idx), y: 0), animated: false)
+                    self.currentIndex = idx
+                }
+            }).addDisposableTo(disposeBag)
+            
+            if let segmentView = segmentView {
+                indexSubject.subscribeNext { (idx) in
+                    if idx != segmentView.index {
+                        segmentView.index = idx
+                    }
+                    }.addDisposableTo(disposeBag)
+                segmentView.rx_observe(Int.self, "index").map { [weak self] (idx) -> Int in
+                    return idx ?? self!.currentIndex
+                    }.distinctUntilChanged().subscribeNext { [weak self] (idx) in
+                        guard let `self` = self else {
+                            return
+                        }
+                        self.indexSubject.onNext(idx)
+                    }.addDisposableTo(disposeBag)
+            }
         }
     }
 

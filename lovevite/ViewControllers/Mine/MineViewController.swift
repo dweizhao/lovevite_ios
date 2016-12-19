@@ -12,15 +12,13 @@ class MineViewController: MultipleTabsViewController {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nil, bundle: nil)
-        NSNotificationCenter.defaultCenter()
-            .rx_notification(NotificationNames.MineSubTableViewContentOffsetYChanged)
+        NSNotificationCenter.defaultCenter().rx_notification(NotificationNames.MineSubTableViewContentOffsetYChanged)
             .subscribeNext { [weak self] noti in
                 if let offsetY = (noti.userInfo?["offsetY"] as? CGFloat) {
                     let y = offsetY > MineUserInterfaceContent.photosViewHeight ? MineUserInterfaceContent.photosViewHeight : offsetY
                     self?.headerView.frame.origin.y = -y
                 }
-            }
-            .addDisposableTo(disposeBag)
+            }.addDisposableTo(disposeBag)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -43,11 +41,14 @@ class MineViewController: MultipleTabsViewController {
         return c
     }()
     
-    private let segmentView = ESSegmentControl.init(titles: ["个人资料".es_ml(), "择偶要求".es_ml(), "关于我".es_ml(), "真心话".es_ml()])
+    private lazy var libraryViewController: PictureLibraryViewController = {
+        let vc = PictureLibraryViewController()
+        vc.title = "相册"
+        vc.willAddMutilpSelectButton()
+        return vc
+    }()
     
-    override var subViewControllers: Array<BaseViewController> {
-        return viewControllers
-    }
+    private let tabNamesView = ESSegmentControl.init(titles: ["个人资料".es_ml(), "择偶要求".es_ml(), "关于我".es_ml(), "真心话".es_ml()])
     
     private let viewControllers = [PersonalInfoViewController(), DesiredRequireViewController(), SomeQuestionForMeViewController(), TrueWordsViewController()]
     
@@ -57,10 +58,12 @@ class MineViewController: MultipleTabsViewController {
     
     private let viewModel = MineConfiguator()
     
-    override var currentIndex: Int {
-        willSet {
-            segmentView.index = newValue
-        }
+    override var segmentView: ESSegmentControl? {
+        return tabNamesView
+    }
+    
+    override var subViewControllers: Array<BaseViewController> {
+        return viewControllers
     }
 
 }
@@ -79,14 +82,12 @@ extension MineViewController {
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: false)
         UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: .None)
     }
     
     override func initialize() {
         super.initialize()
-        
-        title = "主页"
+        title = "主页".es_ml()
         
         view.addSubview(headerView)
         
@@ -102,15 +103,17 @@ extension MineViewController {
         toPhotoLibraryBtn.tintColor = UIColor.whiteColor()
         headerView.addSubview(toPhotoLibraryBtn)
         
-        segmentView.frame = CGRectMake(0, UIScreen.width - 35, UIScreen.width, 35)
-        segmentView.updateConstraintsIfNeeded()
-        segmentView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.4)
-        headerView.addSubview(segmentView)
+        tabNamesView.frame = CGRectMake(0, UIScreen.width - 35, UIScreen.width, 35)
+        tabNamesView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.4)
+        headerView.addSubview(tabNamesView)
         
         // MARK: to photo library button response.
         
-        toPhotoLibraryBtn.rx_tap.subscribeNext({
-                print("编辑照片")
+        toPhotoLibraryBtn.rx_tap.subscribeNext({ [weak self] in
+            guard let `self` = self else {
+                return
+            }
+            self.navigationController?.pushViewController(self.libraryViewController, animated: true)
             }).addDisposableTo(disposeBag)
     }
     

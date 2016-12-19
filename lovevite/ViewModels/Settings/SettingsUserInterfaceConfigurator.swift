@@ -13,7 +13,7 @@ class SettingsUserInterfaceConfigurator: NSObject {
     private let uiContent = SettingsUserInterfaceContent()
     
     func title() -> String {
-        return uiContent.viewControllerTitle
+        return uiContent.viewControllerTitle.es_ml()
     }
     
     func signOutBtnTitle() -> String {

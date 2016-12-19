@@ -36,6 +36,7 @@ extension MainTabbarViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        edgesForExtendedLayout = .None
         view.backgroundColor = UIColor.whiteColor()
     }
     

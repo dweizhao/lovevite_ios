@@ -25,6 +25,7 @@ class MultipleTabsView: UICollectionView {
         fl.minimumInteritemSpacing = CGFloat.min
         fl.scrollDirection = .Horizontal
         fl.itemSize = UIScreen.size
+        fl.sectionInset = UIEdgeInsets.init(top: 0, left: 0.0, bottom: 0, right: 0)
         super.init(frame: UIScreen.frame, collectionViewLayout: fl)
         backgroundColor = UIColor.bgGray
         allowsSelection = false

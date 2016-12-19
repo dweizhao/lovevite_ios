@@ -13,6 +13,7 @@ import RxSwift
 import RxCocoa
 
 private extension RequestMethod {
+    
     var alamofireMethod: Alamofire.Method {
         switch self {
         case .Get:
@@ -21,11 +22,16 @@ private extension RequestMethod {
             return .POST
         }
     }
+    
 }
 
 class NetworkManager {
     
-    static let baseURL = "http://dev.api.woshichezhu.com/"
+    static let debugURL = "http://54.214.162.237"
+    
+    static let releaseURL = "http://www.baidu.com"
+    
+    static let baseURL = APP.isRelease ? releaseURL : debugURL
     
     static let needLoginNotification = "NeedLoginNotification"
     
@@ -35,35 +41,28 @@ class NetworkManager {
         var header = ["Content-Type": "application/x-www-form-urlencoded",
                       "Accept": "application/json",]
         if !token.isEmpty {
-            header[headerTokenKey] = token
+            header[headerTokenKey] = "<\(token)>"
         }
         return header
     }
     
-    static private let headerTokenKey = "Authorization"
+    static private let headerTokenKey = "authId"
     
-    static private(set) var token: String {
-        get {
-            return NSUserDefaults.standardUserDefaults().valueForKey(localTokenKey) as? String ?? ""
-        }
-        set {
-            NSUserDefaults.standardUserDefaults().setValue(newValue, forKey: localTokenKey)
-        }
+    static private var token: String {
+        return UserManager.token ?? ""
     }
     
-    static func storeToken(token: String) {
-        NetworkManager.token = "Bearer \(token)"
+    static private func failureResultDic(httpStatusCode code: Int) -> Dictionary<String, AnyObject> {
+        return ["status": code,
+                "message": "网络暂时不通畅，请稍后再试"]
     }
-    
-    static private let failureResultDic  = ["status": -1,
-                                            "message": "网络暂时不通畅，请稍后再试"]
 
     func rx_request<T>(config: RequestConfig<T>) -> RxSwift.Observable<T> {
         return rx_requestByIgnoringCodeEvent(config).map {
             if !config.codeEventIgnore {
                 if let requestResult = $0 as? Response {
                     switch requestResult.status {
-                    case 40000...40009:
+                    case 500:
                         NSNotificationCenter
                             .defaultCenter()
                             .postNotificationName(NetworkManager.needLoginNotification, object: nil, userInfo: nil)
@@ -84,26 +83,27 @@ class NetworkManager {
         return RxAlamofire.requestJSON(method, config.url, parameters: config.parameters, headers: NetworkManager.httpRequestHeader)
             .observeOn(MainScheduler.instance)
             .map { (response, json) -> T in
-            let object = Mapper<T>().map(json) ?? Mapper<T>().map(NetworkManager.failureResultDic)!
+            guard var dic = json as? Dictionary<String, AnyObject> else {
+                let object = Mapper<T>().map(json) ?? Mapper<T>().map(NetworkManager.failureResultDic(httpStatusCode: response.statusCode))!
+                return object
+            }
+            dic["status"] = response.statusCode
+            let object = Mapper<T>().map(dic) ?? Mapper<T>().map(NetworkManager.failureResultDic(httpStatusCode: response.statusCode))!
             return object
-        }
-    }
-    
-    private func checkToken(response: NSHTTPURLResponse?) {
-        if let token = response?.allHeaderFields[NetworkManager.headerTokenKey] as? String {
-            NetworkManager.token = token
         }
     }
     
     private func printResponseData(data: NSData?) {
         if let data = data {
             let dic = try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
-    
             print(dic)
         }else {
             print("没有response data")
         }
     }
     
+    static func completeImageURL(suffix: String) -> String {
+        return debugURL + suffix
+    }
 
 }

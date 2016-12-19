@@ -16,6 +16,8 @@ class ViewControllerManager: NSObject {
     
     let mainTabbarViewController: MainTabbarViewController
     
+    let mainNavigationController: UINavigationController
+    
     let rootViewController: ExtendableViewController
     
     // MARK: private
@@ -23,12 +25,23 @@ class ViewControllerManager: NSObject {
     private override init() {
         mainTabbarViewController = MainTabbarViewController()
         
-        let mainNavigationController = UINavigationController(rootViewController: mainTabbarViewController)
-        mainNavigationController.navigationBar.barTintColor = UIColor.main
+        mainNavigationController = UINavigationController(rootViewController: mainTabbarViewController)
+        mainNavigationController.setCommonStyle()
         
         rootViewController = ExtendableViewController(mainViewController: mainNavigationController)
         
         super.init()
+    }
+    
+}
+
+extension ViewControllerManager {
+    
+    func theVisibleViewController<T>() -> T? {
+        guard let vc = mainNavigationController.viewControllers.last else {
+            return nil
+        }
+        return vc as? T
     }
     
 }

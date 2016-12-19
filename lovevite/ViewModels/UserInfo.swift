@@ -8,24 +8,17 @@
 
 import ObjectMapper
 
-class UserInfo: Mappable {
+class UserInfo: Response {
     
     private var model: UserModel?
     
     required init?(_ map: Map) {
-        mapping(map)
+        super.init(map)
     }
     
-    func mapping(map: Map) {
+    override func mapping(map: Map) {
+        super.mapping(map)
         model           <- map["user"]
-    }
-    
-}
-
-extension UserInfo {
-    
-    func token() -> String? {
-        return model?.token
     }
     
 }

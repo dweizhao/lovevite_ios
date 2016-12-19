@@ -249,6 +249,7 @@
     label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     label.textAlignment = NSTextAlignmentCenter;
     label.backgroundColor = [UIColor clearColor];
+    label.hidden = YES;
     return label;
 }
 

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import YYWebImage
 
 class LoginViewController: BaseViewController {
     
@@ -87,7 +88,9 @@ extension LoginViewController {
         let input = Observable.combineLatest(username.rx_text, password.rx_text, resultSelector: { return ($0, $1) })
         
         input.map { (username, password) -> Bool in
-            if username.characters.count > 6 && password.characters.count > 6 { return true }
+            if username.characters.count > 6 && password.characters.count > 6 {
+                return true
+            }
             return false
         }.distinctUntilChanged().subscribeNext { (result) in
             if result {
@@ -112,10 +115,24 @@ extension LoginViewController {
                 return false
             }
             return true
-        }.subscribeNext { [weak self] (username, password) in
-            self?.presentingViewController?.dismissViewControllerAnimated(true, completion: { 
-                ViewControllerManager.manager.mainTabbarViewController.view.showMsgHUD("模拟登录成功")
-            })
+        }.flatMapLatest { [weak self] (username, password) -> Observable<UserToken> in
+            guard let `self` = self else {
+                return API.login(username, password: password)
+            }
+            self.view.showLoadingHUD()
+            return API.login(username, password: password)
+        }.subscribeNext { [weak self] (token) in
+            guard let `self` = self else {
+                return
+            }
+            self.view.hideAllHUDs()
+            if token.isSuccess {
+                UserManager.createTheNewUser(token)
+                self.handleAtLogined()
+                self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+            } else {
+                self.view.showMsgHUD(token.message)
+            }
         }.addDisposableTo(disposeBag)
         
         //MARK: register button
@@ -136,6 +153,14 @@ extension LoginViewController {
                 self?.navigationController?.pushViewController(vc, animated: true)
             })
             .addDisposableTo(disposeBag)
+    }
+    
+    private func handleAtLogined() {
+        NSNotificationCenter.defaultCenter().postNotificationName(NotificationNames.UserLogined, object: nil)
+        guard let token = UserManager.token else {
+            return
+        }
+        YYWebImageManager.sharedManager().headers = ["authId":token]
     }
     
 }

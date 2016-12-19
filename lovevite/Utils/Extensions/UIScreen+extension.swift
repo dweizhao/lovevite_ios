@@ -26,8 +26,12 @@ extension UIScreen {
         return 64.0
     }
     
+    static var statusBarHeight: CGFloat {
+        return 20.0
+    }
+    
     static var tabBarHeight: CGFloat {
-        return 48.0
+        return 49.0
     }
     
     static var center: CGPoint {
@@ -42,8 +46,20 @@ extension UIScreen {
         return UIScreen.mainScreen().bounds
     }
     
+    static func frame(inset: UIEdgeInsets) -> CGRect {
+        return CGRect.init(x: inset.left, y: inset.top, width: width - inset.left - inset.right, height: height - inset.top - inset.bottom)
+    }
+    
+    static var noneNavibarFrame: CGRect {
+        return CGRect.init(x: 0, y: UIScreen.navigationBarHeight, width: UIScreen.width, height: UIScreen.height - UIScreen.navigationBarHeight)
+    }
+    
     static var noneTabbarFrame: CGRect {
         return CGRect.init(x: 0, y: 0, width: width, height: height - tabBarHeight)
+    }
+    
+    static var noneNavTabBarFrame: CGRect {
+        return CGRect.init(x: 0, y: navigationBarHeight, width: width, height: height - navigationBarHeight - tabBarHeight)
     }
     
 }

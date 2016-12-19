@@ -9,7 +9,13 @@
 import Foundation
 
 struct NotificationNames {
+    
+    static let UserLogined = "es.lovevite.userHaveBeenLogined"
 
     static let MineSubTableViewContentOffsetYChanged = "es.lovevite.mineSubTableViewContrntOffsetYChanged"
+    
+    static let SearchSubTableViewContentOffsetYChanged = "es.lovevite.searchSubTableViewContentOffsetYChanged"
+    
+    static let DestinySubTableViewContentOffsetYChanged = "es.lovevite.destinySubTableViewContentOffsetYChanged"
     
 }

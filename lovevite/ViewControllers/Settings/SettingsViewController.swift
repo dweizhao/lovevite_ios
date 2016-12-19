@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsViewController: BaseViewController {
 
-    private let settingsTable = UITableView.init(frame: UIScreen.mainScreen().bounds, style: .Grouped)
+    private let settingsTable = UITableView.init(frame: UIScreen.frame(UIEdgeInsets.init(top: UIScreen.navigationBarHeight, left: 0, bottom: 0, right: 0)), style: .Grouped)
     
     private let configurator = SettingsUserInterfaceConfigurator()
     
@@ -24,7 +24,21 @@ extension SettingsViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = configurator.title()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func initialize() {
+        super.initialize()
+        
+        title = "设置"
+        
+        let navBar = CustomNavBar.init(title: configurator.title())
+        view.addSubview(navBar)
+        
         configSettingsTableView()
         configSignOutButton()
         view.addSubview(settingsTable)
@@ -36,6 +50,8 @@ extension SettingsViewController {
         settingsTable.addTableFooterView(200)
         settingsTable.dataSource = self
         settingsTable.delegate = self
+        settingsTable.showsVerticalScrollIndicator = false
+        settingsTable.showsHorizontalScrollIndicator = false
     }
     
     private func configSignOutButton() {

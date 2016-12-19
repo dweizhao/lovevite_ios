@@ -10,10 +10,13 @@ import ObjectMapper
 
 
 class Response: NSObject, Mappable {
+    
     var status = -1
+    
     var message: String?
+    
     var isSuccess: Bool {
-        return status == 0
+        return status == 200
     }
     
     required init?(_ map: Map) {
@@ -26,8 +29,8 @@ class Response: NSObject, Mappable {
     }
     
     func mapping(map: Map) {
-        status    <- map["status"]
-        message <- map["statusInfo.message"]
+        status      <- map["status"]
+        message     <- map["message"]
     }
     
 }

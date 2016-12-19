@@ -26,6 +26,14 @@ extension UIColor {
         return UIColor.color(hexValue: 0xE74614, alphaValue: alpha)
     }
     
+    static var customBlack: UIColor {
+        return UIColor.color(hexValue: 0x222222)
+    }
+    
+    static var customGray: UIColor {
+        return UIColor.color(hexValue: 0xEAEAEA)
+    }
+    
     static var bgGray: UIColor {
         return UIColor.color(hexValue: 0xF8F8F8)
     }
@@ -39,7 +47,7 @@ extension UIColor {
     }
     
     static var text: UIColor {
-        return UIColor.color(hexValue: 0x222222)
+        return UIColor.color(hexValue: 0x515151)
     }
     
     static var textGray: UIColor {

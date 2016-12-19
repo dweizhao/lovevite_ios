@@ -10,26 +10,9 @@ import Foundation
 
 class ESSegmentControl: UIView {
     
-    var segmentBackgroundColor: UIColor! = UIColor.clearColor()
-    
-    var currentSegmentBackgroundColor: UIColor! = UIColor.clearColor()
-    
-    var segmentTintColor: UIColor! = UIColor.whiteColor()
-    
-    var currentSegmentTintColor: UIColor! = UIColor.main
-    
-    var titles: Array<String> = [] {
-        willSet {
-            configButtons(newValue)
-        }
-    }
-    
-    private let segmentBaseTag = 82932
-    
     convenience init(titles: Array<String>) {
         self.init(frame: CGRectZero)
         self.titles = titles
-        configButtons(titles)
     }
     
     override init(frame: CGRect) {
@@ -57,7 +40,30 @@ class ESSegmentControl: UIView {
     
     private var currentIndex = 0
     
+    private let segmentBaseTag = 82932
+    
     private let disposeBag = DisposeBag()
+    
+    var segmentBackgroundColor: UIColor! = UIColor.clearColor()
+    
+    var currentSegmentBackgroundColor: UIColor! = UIColor.clearColor()
+    
+    var segmentTintColor: UIColor! = UIColor.whiteColor()
+    
+    var currentSegmentTintColor: UIColor! = UIColor.main
+    
+    var titles: Array<String>?
+    
+    private lazy var bottomMargin: CAShapeLayer = {
+        let layer = CAShapeLayer()
+        let line = UIBezierPath()
+        line.moveToPoint(CGPoint.init(x: 0, y: self.bounds.height))
+        line.addLineToPoint(CGPoint.init(x: UIScreen.width, y: self.bounds.height))
+        layer.path = line.CGPath
+        layer.strokeColor = UIColor.customGray.CGColor
+        layer.lineWidth = 1
+        return layer
+    }()
     
 }
 
@@ -74,15 +80,34 @@ extension ESSegmentControl {
                     make.width.equalTo(placeholder!)
                 } else {
                     make.left.equalTo(0)
-                    make.width.equalTo(self).dividedBy(titles.count)
+                    make.width.equalTo(self).dividedBy(titles!.count)
                 }
                 placeholder = btn
             })
         }
     }
     
-    private func configButtons(titles: Array<String>) {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if indexLayer.superlayer == nil {
+            configButtons()
+            updateConstraintsIfNeeded()
+            index = 0
+            strokeToForwardsAnimation(index)
+            layer.addSublayer(bottomMargin)
+            layer.addSublayer(indexLayer)
+        }
+    }
+    
+}
+
+extension ESSegmentControl {
+    
+    func configButtons() {
         subviews.forEach{ $0.removeFromSuperview() }
+        guard let titles = titles else {
+            return
+        }
         for (index, title) in titles.enumerate() {
             let btn = UIButton.custom(title)
             btn.tag = segmentBaseTag + index
@@ -97,23 +122,12 @@ extension ESSegmentControl {
                 })
                 .subscribeNext({ [weak self] in
                     self?.index = index
-                })
+                    })
                 .addDisposableTo(disposeBag)
             buttons.append(btn)
             addSubview(btn)
         }
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        if indexLayer.superlayer == nil {
-            layer.addSublayer(indexLayer)
-        }
-    }
-    
-}
-
-extension ESSegmentControl {
     
     var index: Int {
         set {
@@ -146,11 +160,11 @@ extension ESSegmentControl {
         let start = ESAnimation.init(keyPath: "strokeStart", duration: 0.2, fromValue: indexLayer.strokeStart) { (finished) in
             if finished {
                 let end = ESAnimation.init(keyPath: "strokeEnd", duration: 0.2, fromValue: self.indexLayer.strokeEnd, completion: nil)
-                self.indexLayer.strokeEnd = CGFloat(newIndex + 1) / CGFloat(self.titles.count)
+                self.indexLayer.strokeEnd = CGFloat(newIndex + 1) / CGFloat(self.buttons.count)
                 self.indexLayer.addAnimation(end.animation, forKey: nil)
             }
         }
-        indexLayer.strokeStart = CGFloat(newIndex) / CGFloat(titles.count)
+        indexLayer.strokeStart = CGFloat(newIndex) / CGFloat(buttons.count)
         indexLayer.addAnimation(start.animation, forKey: nil)
     }
     
@@ -158,11 +172,11 @@ extension ESSegmentControl {
         let end = ESAnimation.init(keyPath: "strokeEnd", duration: 0.2, fromValue: indexLayer.strokeEnd) { (finished) in
             if finished {
                 let start = ESAnimation.init(keyPath: "strokeStart", duration: 0.2, fromValue: self.indexLayer.strokeStart, completion: nil)
-                self.indexLayer.strokeStart = CGFloat(newIndex) / CGFloat(self.titles.count)
+                self.indexLayer.strokeStart = CGFloat(newIndex) / CGFloat(self.buttons.count)
                 self.indexLayer.addAnimation(start.animation, forKey: nil)
             }
         }
-        indexLayer.strokeEnd = CGFloat(newIndex + 1) / CGFloat(titles.count)
+        indexLayer.strokeEnd = CGFloat(newIndex + 1) / CGFloat(buttons.count)
         indexLayer.addAnimation(end.animation, forKey: nil)
     }
     

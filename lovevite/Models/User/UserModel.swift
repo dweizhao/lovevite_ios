@@ -10,14 +10,12 @@ import ObjectMapper
 
 struct UserModel: Mappable {
     
-    var token: String?
-    
     init?(_ map: Map) {
         mapping(map)
     }
     
     mutating func mapping(map: Map) {
-        token           <- map["map"]
+        
     }
     
 }

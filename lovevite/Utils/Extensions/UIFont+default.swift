@@ -18,6 +18,10 @@ extension UIFont {
         return UIFont.defaultWithSize(15.0)
     }
     
+    static var subtitle: UIFont {
+        return UIFont.defaultWithSize(13.0)
+    }
+    
     static var button: UIFont {
         return UIFont.defaultWithSize(14.0)
     }

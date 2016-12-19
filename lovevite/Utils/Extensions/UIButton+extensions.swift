@@ -16,4 +16,13 @@ extension UIButton {
         return btn
     }
     
+    static func custom(nImage: UIImage?, hImage: UIImage? = nil, sImage: UIImage? = nil) -> UIButton {
+        let btn = UIButton.init(type: UIButtonType.System)
+        btn.tintColor = UIColor.clearColor()
+        btn.setImage(nImage, forState: .Normal)
+        btn.setImage(hImage, forState: .Highlighted)
+        btn.setImage(sImage, forState: .Selected)
+        return btn
+    }
+    
 }

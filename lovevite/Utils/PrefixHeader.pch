@@ -14,7 +14,9 @@
 @import RxCocoa;
 @import ObjectMapper;
 @import MBProgressHUD;
+@import MJRefresh;
 
 #import <YYWebImage/YYWebImage.h>
+#import <YYWebImage/YYWebImageManager.h>
 
 #endif /* PrefixHeader_pch */

@@ -27,6 +27,15 @@
     return _arrowView;
 }
 
+//- (UIActivityIndicatorView *)arrowView {
+//    if (!_arrowView) {
+//        UIActivityIndicatorView *loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:self.activityIndicatorViewStyle];
+//        loadingView.hidesWhenStopped = YES;
+//        [self addSubview:_arrowView = loadingView];
+//    }
+//    return _arrowView;
+//}
+
 - (UIActivityIndicatorView *)loadingView
 {
     if (!_loadingView) {

@@ -31,7 +31,7 @@ extension RightForCustomViewDefaultCell {
     
     private func configTitleLabel() {
         titleLabel.textColor = UIColor.title
-        titleLabel.font = UIFont.body
+        titleLabel.font = UIFont.button
         titleLabel.textAlignment = .Left
     }
     

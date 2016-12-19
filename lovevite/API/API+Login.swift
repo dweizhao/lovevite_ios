@@ -7,10 +7,6 @@
 //
 
 import Foundation
-import RxSwift
-import RxCocoa
-
-class API {}
 
 // MARK: - Login API
 extension API {
@@ -20,14 +16,18 @@ extension API {
 
      In API:
      
-     static func login(phone: String, password: String) -> RxSwift.Observable<LoginModel> {
-         let config = RequestConfig<LoginModel>(URLPath: "api_dealer/dealer/user/login")
-         config.addParameter("mobile", value: phone)
-         config.addParameter("password", value: password)
-         return NetworkManager().rx_request(config)
+     */
+     
+     static func login(username: String, password: String) -> RxSwift.Observable<UserToken> {
+        let config = RequestConfig<UserToken>(URLPath: "/api/account/login")
+        config.method = .Post
+        config.addParameter("username", value: username)
+        config.addParameter("password", value: password)
+        config.addParameter("device", value: "iOS")
+        return NetworkManager().rx_request(config)
      }
     
-     * LoginModel is a subclass of Response
+     /* LoginModel is a subclass of Response
      
      In view controller and view model:
      

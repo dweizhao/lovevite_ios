@@ -22,8 +22,22 @@ class Keys: NSObject {
 
 extension Keys {
     
+    static var saveUserToken: String {
+        return "eason_lovevite_save_user_token"
+    }
+    
     static var saveUserInfo: String {
         return "eason_lovevite_save_user_info"
+    }
+    
+}
+
+// MARK: save the details user default key
+
+extension Keys {
+    
+    static var picturesLibraryNoteLabelShouldShow: String {
+        return "eason_lovevite_pictures_library_note_label_should_show"
     }
     
 }

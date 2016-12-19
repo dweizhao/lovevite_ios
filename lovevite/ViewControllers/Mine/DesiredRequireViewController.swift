@@ -32,11 +32,11 @@ class DesiredRequireViewController: BaseViewController {
     
     let tableView = UITableView.init(frame: UIScreen.noneTabbarFrame, style: .Grouped)
     
-    struct ReuseIdentifier {
+    private let viewModel = DesiredRequireConfiguator()
+    
+    private struct ReuseIdentifier {
         static var defaultCell = "desiredRequireDefaultCell"
     }
-    
-    private let viewModel = DesiredRequireConfiguator()
     
     private var shouldPostContentOffsetY = false
     
